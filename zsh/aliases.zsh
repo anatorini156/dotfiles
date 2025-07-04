@@ -1,5 +1,8 @@
-alias fd=fdfind
+alias fd="fdfind"
 alias cat="batcat --paging=never"
+alias lv="ls -1"
+alias ff="fzf --preview \"batcat --color=always  {}\""
+
 
 alias gs="git status"
 alias gp="git push"
