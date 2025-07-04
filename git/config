@@ -4,6 +4,11 @@
     fsync = none
     whitespace = error  # threat incorrect whitespace as errors
     preloadindex = true  # preload index for faster status
+[user]
+    signingKey = 0A6345E96EC1269E
+
+[commit]
+    gpgSign = true
 
 [advice]  # disable advices
     addEmptyPathspec = false
