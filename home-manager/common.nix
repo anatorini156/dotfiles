@@ -35,6 +35,12 @@
     ".username".text = ''
       ${username}
     '';
+
+    # ".config/discord/settings.json".text = ''
+    #   {
+    #   "SKIP_HOST_UPDATE": true
+    #   }
+    # '';
   };
 
   home.sessionVariables = {

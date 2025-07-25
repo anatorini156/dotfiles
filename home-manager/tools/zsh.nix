@@ -11,6 +11,7 @@
       gu = "git pull";
       gc = "git commit -S -m";
       ga = "git add";
+      discord = "discord --no-sandbox";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
