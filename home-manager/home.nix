@@ -1,10 +1,16 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-{
-  home.username = "anatorini";
-  home.homeDirectory = "/home/anatorini";
+let
+  platform = "Linux";
+  # platform = "Darwin";
+in {
+  imports = [
+    ./tools/default.nix
 
-  home.stateVersion = "25.05"; # Please read the comment before changing.
+  ] ++ (if platform == "Darwin" then [ ./os/darwin.nix ] else [ ])
+    ++ (if platform == "Linux" then [ ./os/linux.nix ] else [ ]);
+
+  home.stateVersion = "25.05";
 
   home.packages = [
     pkgs.delta
@@ -32,110 +38,12 @@
     # '';
   };
 
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    EDITOR = "nvim";
 
-  # Let Home Manager install and manage itself.
+  };
+
   programs.home-manager.enable = true;
-  programs.zsh = {
-    enable = true;
-    dotDir = ".config/zsh";
-    shellAliases = {
-      cat = "bat --paging=never";
-      lv = "lsd -1";
-      ff = ''fzf --preview "batcat --color=always  {}"'';
-      gs = "git status";
-      gp = "git push";
-      gu = "git pull";
-      gc = "git commit -S -m";
-      ga = "git add";
-    };
-    dirHashes = {
-      dev = "$HOME/Dev/";
-      docs = "$HOME/Documents/";
-    };
-    oh-my-zsh = {
-      enable = true;
-      theme = "bira";
-      plugins =
-        [ "git" "colored-man-pages" "nvm" "git-auto-fetch" "git-prompt" "fzf" ];
-      extraConfig = ''
-        zstyle ':omz:update' mode disabled  
-        zstyle ':omz:plugins:nvm' lazy yes
-      '';
-    };
-    envExtra = ''
-        port() {
-        sudo lsof -i :$1
-      }
-    '';
 
-  };
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-    options = [ "--cmd cd" ];
-  };
-
-  programs.pyenv = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.bat = { enable = true; };
-
-  programs.neovim = {
-    enable = false;
-    defaultEditor = true;
-  };
-
-  programs.git = {
-    enable = true;
-    diff-so-fancy.enable = true;
-    lfs.enable = true;
-    signing = {
-      format = "openpgp";
-      signByDefault = false;
-    };
-    extraConfig = {
-      status = {
-        branch = true;
-        short = true;
-        showStash = true;
-      };
-
-      branch = { sort = "-commiterdate"; };
-      pull = {
-        rebase = true;
-        default = "current";
-      };
-      push = {
-        autoSetupRemote = true;
-        default = "current";
-      };
-
-    };
-    ignores = [
-      ""
-      ".venv/"
-      ".mypy_cache/"
-      ".pytest_cache/"
-      "__pycache__/"
-      ".hypothesis/"
-      ".ruff_cache/"
-      ".ropeproject/"
-      ".zig-cache/"
-      "zig-out/"
-      "build/"
-      ".env"
-      ".env*"
-    ];
-
-  };
-  programs.lazygit = { enable = true; };
-  programs.lazysql = { enable = true; };
-  programs.lsd = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }
 
