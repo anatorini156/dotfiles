@@ -20,13 +20,19 @@
           inherit pkgs;
 
           modules = [ ./common.nix ./machines/personal.nix ];
-          extraSpecialArgs = { system = system; };
+          extraSpecialArgs = {
+            system = system;
+            username = "anatorini";
+          };
         };
       homeConfigurations."mxszym" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [ ./common.nix ./machines/work.nix ];
-        extraSpecialArgs = { system = system; };
+        extraSpecialArgs = {
+          system = system;
+          username = "mxszym";
+        };
       };
     };
 }

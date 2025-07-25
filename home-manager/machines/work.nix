@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ username, ... }:
 
 {
-  home.username = "mxszym";
-  home.homeDirectory = "/Users/mxszym";
+  home.username = username;
+  home.homeDirectory = "/Users/${username}";
 
   programs.git = {
     userEmail = "marcin.szymczak@dolby.com";

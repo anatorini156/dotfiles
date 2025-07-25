@@ -1,4 +1,4 @@
-{ ... }: {
+{ username, ... }: {
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
@@ -24,12 +24,34 @@
       extraConfig = ''
         zstyle ':omz:update' mode disabled  
         zstyle ':omz:plugins:nvm' lazy yes
+
+
       '';
     };
-    envExtra = ''
-        port() {
-        sudo lsof -i :$1
+
+    initContent = ''
+      hms() {
+          pushd ~/.config/home-manager/
+          home-manager switch --flake .#${username}
+          popd
       }
+
+      hmc() {
+          pushd ~/.config/home-manager/
+          git add -f .
+          git commit
+          git push
+          popd
+      }
+
+      hme() {
+          $EDITOR ~/.config/home-manager/
+      }
+
+      port() {
+          sudo lsof -i :$1
+      }
+
     '';
 
   };
