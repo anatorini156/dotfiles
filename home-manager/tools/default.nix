@@ -9,5 +9,6 @@
     ./lazysql.nix
     ./lsd.nix
     ./zoxide.nix
+    ./fd.nix
   ];
 }

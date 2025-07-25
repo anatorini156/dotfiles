@@ -7,22 +7,28 @@
   ] ++ (if system == "Darwin" then [ ./platforms/darwin.nix ] else [ ])
     ++ (if system == "x86_64-linux" then [ ./platforms/linux.nix ] else [ ]);
 
+  nixpkgs.config.allowUnfree = true;
+
   home.username = username;
 
   programs.home-manager.enable = true;
   home.stateVersion = "25.05";
 
-  home.packages = [
-    pkgs.delta
-    pkgs.bat
-    pkgs.zoxide
-    pkgs.pyenv
-    pkgs.dua
-    pkgs.dust
-    pkgs.flameshot
-    pkgs.ripgrep-all
-    pkgs.tdf
-    pkgs.neovim
+  home.packages = with pkgs; [
+    delta
+    bat
+    zoxide
+    pyenv
+    dua
+    dust
+    flameshot
+    ripgrep-all
+    tdf
+    neovim
+    gimp3
+    spotify
+    discord
+    fd
   ];
 
   home.file = {
