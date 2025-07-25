@@ -29,6 +29,7 @@
     spotify
     discord
     fd
+    obsidian
   ];
 
   home.file = {

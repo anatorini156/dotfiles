@@ -10,6 +10,5 @@
     ./lsd.nix
     ./zoxide.nix
     ./fd.nix
-    ./obsidian.nix
   ];
 }
