@@ -1,17 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, system, ... }:
 
-let
-  platform = "Linux";
-  # platform = "Darwin";
-in {
+{
   imports = [
     ./tools/default.nix
 
-  ] ++ (if platform == "Darwin" then [ ./os/darwin.nix ] else [ ])
-    ++ (if platform == "Linux" then [ ./os/linux.nix ] else [ ]);
+  ] ++ (if system == "Darwin" then [ ./platforms/darwin.nix ] else [ ])
+    ++ (if system == "x86_64-linux" then [ ./platforms/linux.nix ] else [ ]);
 
+  programs.home-manager.enable = true;
   home.stateVersion = "25.05";
-
   home.packages = [
     pkgs.delta
     pkgs.bat
@@ -42,8 +39,6 @@ in {
     EDITOR = "nvim";
 
   };
-
-  programs.home-manager.enable = true;
 
 }
 
