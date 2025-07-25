@@ -1,4 +1,4 @@
-{ pkgs, system, ... }:
+{ username, pkgs, system, ... }:
 
 {
   imports = [
@@ -7,8 +7,11 @@
   ] ++ (if system == "Darwin" then [ ./platforms/darwin.nix ] else [ ])
     ++ (if system == "x86_64-linux" then [ ./platforms/linux.nix ] else [ ]);
 
+  home.username = username;
+
   programs.home-manager.enable = true;
   home.stateVersion = "25.05";
+
   home.packages = [
     pkgs.delta
     pkgs.bat
@@ -23,16 +26,9 @@
   ];
 
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
+    ".username".text = ''
+      ${username}
+    '';
   };
 
   home.sessionVariables = {
