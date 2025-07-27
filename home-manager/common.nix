@@ -6,7 +6,7 @@
   ...
 }:
 let
-  lspServers = import ./packages/lsp.nix { inherit pkgs; };
+  languages = import ./packages/languages.nix { inherit pkgs; };
 in
 {
   imports = [
@@ -53,9 +53,11 @@ in
       xclip
       tldr
       kitty
-      python312
+      felix-fm
+      chafa
+      fastfetch
     ]
-    ++ lspServers;
+    ++ languages;
 
   home.file = {
     ".username".text = ''

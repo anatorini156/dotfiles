@@ -75,6 +75,7 @@
       }
 
       export EDITOR="nvim"
+      source <(command fx --init)
 
     '';
 
