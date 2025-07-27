@@ -5,7 +5,9 @@
     lfs.enable = true;
     signing = {
       format = "openpgp";
-      signByDefault = false;
+      signByDefault = true;
+      key = "673B43A229490888";
+
     };
     extraConfig = {
       status = {
