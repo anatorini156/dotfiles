@@ -6,8 +6,6 @@
     signing = {
       format = "openpgp";
       signByDefault = true;
-      key = "673B43A229490888";
-
     };
     extraConfig = {
       status = {
