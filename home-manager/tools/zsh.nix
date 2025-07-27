@@ -49,9 +49,31 @@
           $EDITOR ~/.config/home-manager/
       }
 
+      ose() {
+          $EDITOR ~/.config/nixos/configuration.nix
+      }
+
+      oss() {
+          sudo nixos-rebuild switch
+      }
+
+      osc() {
+          pushd ~/.config/nixos/
+          git add -f .
+          git commit
+          git push
+          popd
+      }
+
       port() {
           sudo lsof -i :$1
       }
+
+      nve() {
+        $EDITOR ~/.config/nvim/
+      }
+
+      export EDITOR="nvim"
 
     '';
 

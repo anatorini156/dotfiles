@@ -12,9 +12,11 @@ vim.o.softtabstop = 2
 vim.bo.softtabstop = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
+vim.opt.clipboard:append("unnamedplus")
 
 require("config.lazy")
 require("config.keymaps")
+require("config.lsp")
 
 require("nvim-tree").setup()
 require('telescope')

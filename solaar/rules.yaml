@@ -1,0 +1,29 @@
+%YAML 1.3
+---
+- Test: thumb_wheel_up
+- Execute: [/home/anatorini/.nix-profile/bin/amixer, set, Master, 1%+]
+...
+---
+- Test: thumb_wheel_down
+- Execute: [/home/anatorini/.nix-profile/bin/amixer, set, Master, 1%-]
+...
+---
+- MouseGesture: Mouse Down
+- KeyPress:
+  - Escape
+  - click
+...
+---
+- MouseGesture: Mouse Up
+- KeyPress:
+  - Super_L
+  - click
+...
+---
+- MouseGesture: Mouse Right
+- Execute: [/home/anatorini/.config/solaar/swipe_desktop.sh, p]
+...
+---
+- MouseGesture: Mouse Left
+- Execute: [/home/anatorini/.config/solaar/swipe_desktop.sh, n]
+...

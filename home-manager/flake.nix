@@ -8,27 +8,44 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      zen-browser,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      homeConfigurations."anatorini" =
-        home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+    in
+    {
+      homeConfigurations."anatorini" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-          modules = [ ./common.nix ./machines/personal.nix ];
-          extraSpecialArgs = {
-            system = system;
-            username = "anatorini";
-          };
+        modules = [
+          ./common.nix
+          ./machines/personal.nix
+        ];
+        extraSpecialArgs = {
+          system = system;
+          username = "anatorini";
+          zen = zen-browser;
         };
+      };
       homeConfigurations."mxszym" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        modules = [ ./common.nix ./machines/work.nix ];
+        modules = [
+          ./common.nix
+          ./machines/work.nix
+        ];
         extraSpecialArgs = {
           system = system;
           username = "mxszym";

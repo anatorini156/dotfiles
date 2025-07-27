@@ -1,5 +1,7 @@
 -- General
 vim.keymap.set('n', 'qq', '<cmd>qa<CR>', { noremap = true, silent = true })
+vim.keymap.set('v', 'Y', '"+y', { noremap = true, silent = true })
+vim.keymap.set('n', 'P', '"+p', { noremap = true, silent = true })
 
 -- Navigate windows
 

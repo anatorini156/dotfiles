@@ -26,7 +26,7 @@ return {
   function()
 	  vim.diagnostic.config({
 	  virtual_text = true,
-	  signs = true,              -- gutter icons (E/W)
+	  signs = false,              -- gutter icons (E/W)
 	  underline = true,          -- underline error text
 	  update_in_insert = false,
 	  severity_sort = true,
