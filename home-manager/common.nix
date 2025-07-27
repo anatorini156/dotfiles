@@ -52,6 +52,8 @@ in
       alsa-utils
       xclip
       tldr
+      kitty
+      python312
     ]
     ++ lspServers;
 

@@ -33,6 +33,7 @@
     initContent = ''
       hms() {
           pushd ~/.config/home-manager/
+          git add -f .
           home-manager switch --flake .#${username}
           popd
       }
