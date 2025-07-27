@@ -14,9 +14,13 @@ vim.o.autoindent = true
 vim.o.smartindent = true
 vim.opt.clipboard:append("unnamedplus")
 
+vim.g.disable_autoformat = false
+
 require("config.lazy")
-require("config.keymaps")
+require("config.keymaps.index")
 require("config.lsp")
+require("config.format")
+require("config.commands")
 
 require("nvim-tree").setup()
-require('telescope')
+require("telescope")

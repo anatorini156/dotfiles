@@ -1,22 +1,26 @@
-local nvim_lsp = require("lspconfig")
+local lspconfig = require("lspconfig")
 
-nvim_lsp.lua_ls.setup({})
-nvim_lsp.clangd.setup({})
-nvim_lsp.ts_ls.setup({})
-nvim_lsp.pyright.setup({})
-nvim_lsp.jsonls.setup({})
-nvim_lsp.cssls.setup({})
-nvim_lsp.html.setup({})
-nvim_lsp.yamlls.setup({})
-nvim_lsp.zls.setup({})
+local servers = {
+	"lua_ls",
+	"clangd",
+	"ts_ls",
+	"pyright",
+	"jsonls",
+	"cssls",
+	"html",
+	"yamlls",
+	"zls",
+}
+for _, server in ipairs(servers) do
+	lspconfig[server].setup({})
+end
 
-nvim_lsp.nil_ls.setup({
-   settings = {
-      ['nil'] = {
-         formatting = {
-            command = { "nixfmt" },
-         },
-      },
-   },
+lspconfig.nil_ls.setup({
+	--    settings = {
+	--       ['nil'] = {
+	--          formatting = {
+	--             command = { "nixfmt" },
+	--          },
+	--       },
+	--    },
 })
-

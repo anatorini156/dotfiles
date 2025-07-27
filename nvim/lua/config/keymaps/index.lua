@@ -1,0 +1,4 @@
+require("config.keymaps.general")
+require("config.keymaps.windows")
+require("config.keymaps.buffers")
+require("config.keymaps.git")

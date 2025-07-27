@@ -80,19 +80,17 @@
     shell = pkgs.zsh;
   };
 
-
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     neovim
     logitech-udev-rules
     solaar
 
     gnomeExtensions.dash-to-dock
     gnomeExtensions.blur-my-shell
-
-
+    
   ];
 
   programs.gnupg.agent = {
@@ -114,6 +112,7 @@
 
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
   hardware.logitech.wireless.enable = true;
+
 
 
 }

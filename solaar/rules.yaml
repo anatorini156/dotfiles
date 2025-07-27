@@ -20,10 +20,14 @@
   - click
 ...
 ---
-- MouseGesture: Mouse Right
-- Execute: [/home/anatorini/.config/solaar/swipe_desktop.sh, p]
+- MouseGesture: Mouse Left
+- KeyPress:
+  - [Super_L, Page_Down]
+  - click
 ...
 ---
-- MouseGesture: Mouse Left
-- Execute: [/home/anatorini/.config/solaar/swipe_desktop.sh, n]
+- MouseGesture: Mouse Right
+- KeyPress:
+  - [Super_L, Page_Up]
+  - click
 ...

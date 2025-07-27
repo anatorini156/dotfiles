@@ -3,6 +3,7 @@ with pkgs;
 [
   lua
   lua-language-server
+  stylua
 
   nil # Nix language server
   nixfmt-rfc-style # Nix formatter
