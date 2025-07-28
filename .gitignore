@@ -1,4 +1,5 @@
 nixos/hardware-configuration.nix
+home-manager/host.nix
 dconf
 discord
 Electron
