@@ -25,5 +25,7 @@ with pkgs;
 
   zig
   zls
-  
+
+  kotlin-language-server
+
 ]
