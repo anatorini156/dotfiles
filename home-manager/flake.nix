@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of anatorini";
+  description = "Home Manager configuration of mxszym";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
@@ -8,48 +8,29 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
-    {
-      nixpkgs,
-      home-manager,
-      zen-browser,
-      ...
-    }:
+    { nixpkgs, home-manager, ... }:
     let
-      system = "x86_64-linux";
+      system = "x86_64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."anatorini" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          ./common.nix
-          ./machines/personal.nix
-        ];
-        extraSpecialArgs = {
-          system = system;
-          username = "anatorini";
-          zen = zen-browser;
-        };
-      };
       homeConfigurations."mxszym" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        modules = [
-          ./common.nix
-          ./machines/work.nix
-        ];
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [ ./common.nix ];
+
         extraSpecialArgs = {
           system = system;
           username = "mxszym";
         };
+
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
       };
     };
 }

@@ -2,18 +2,19 @@
   username,
   pkgs,
   system,
-  zen,
   ...
 }:
 let
   languages = import ./packages/languages.nix { inherit pkgs; };
+  linux_packages = import ./packages/linux.nix { inherit pkgs; };
+  darwin_packages = import ./packages/darwin.nix { inherit pkgs; };
 in
 {
   imports = [
     ./tools/default.nix
 
   ]
-  ++ (if system == "Darwin" then [ ./platforms/darwin.nix ] else [ ])
+  ++ (if system == "x86_64-darwin" then [ ./platforms/darwin.nix ] else [ ])
   ++ (if system == "x86_64-linux" then [ ./platforms/linux.nix ] else [ ]);
 
   nixpkgs.config.allowUnfree = true;
@@ -28,7 +29,6 @@ in
   home.packages =
     with pkgs;
     [
-      gcc
       nerd-fonts.jetbrains-mono
       delta
       bat
@@ -36,28 +36,22 @@ in
       pyenv
       dua
       dust
-      flameshot
       fzf
       ripgrep
       ripgrep-all
       tdf
       neovim
-      gimp3
-      spotify
-      discord
       fd
       obsidian
       cargo
-      zen.packages.${pkgs.system}.default
-      alsa-utils
-      xclip
       tldr
       kitty
       felix-fm
-      chafa
       fastfetch
     ]
-    ++ languages;
+    ++ languages
+    ++ (if system == "x86_64-darwin" then darwin_packages else [ ])
+    ++ (if system == "x86_64-linux" then linux_packages else [ ]);
 
   home.file = {
     ".username".text = ''
