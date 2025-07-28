@@ -1,7 +1,7 @@
 {
-  username = "anatorini";
-  profile = "personal";
-  system = "x86_64-linux";
+  username = "<name>";
+  profile = "<profile>";
+  system = "<arch>";
   guiApps = true;
 }
 
