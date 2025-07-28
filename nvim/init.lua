@@ -13,8 +13,10 @@ vim.bo.softtabstop = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
 vim.opt.clipboard:append("unnamedplus")
+vim.opt.wrap = false
+vim.opt.scrolloff = 15
 
-vim.g.disable_autoformat = false
+vim.g.disable_autoformat = true
 
 require("config.lazy")
 require("config.keymaps.index")

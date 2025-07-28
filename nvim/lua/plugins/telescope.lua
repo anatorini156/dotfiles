@@ -4,7 +4,7 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-fzf-native.nvim"
   },
-  lazy = true,
+  lazy = false,
   cmd = { "Telescope", "FindFiles" },
   opts = {
     -- require("telescope").setup {
@@ -120,39 +120,39 @@ return {
       noremap = true,
       silent = true
     },
-    {
-      '<leader>sr',
-      '<cmd>Telescope registers<CR>',
-      "n",
-      desc = "Search commands",
-      noremap = true,
-      silent = true
-    },
-
-    {
-      '<leader>sr',
-      '<cmd>Telescope lsp_references<CR>',
-      "n",
-      desc = "Search references(all)",
-      noremap = true,
-      silent = true
-    },
-    {
-      '<leader>si',
-      '<cmd>Telescope lsp_incoming_calls<CR>',
-      "n",
-      desc = "Search references(incoming)",
-      noremap = true,
-      silent = true
-    },
-    {
-      '<leader>so',
-      '<cmd>Telescope lsp_outgoing_calls<CR>',
-      "n",
-      desc = "Search references(outgoing)",
-      noremap = true,
-      silent = true
-    },
+    -- {
+    --   '<leader>sr',
+    --   '<cmd>Telescope registers<CR>',
+    --   "n",
+    --   desc = "Search commands",
+    --   noremap = true,
+    --   silent = true
+    -- },
+    --
+    -- {
+    --   '<leader>sr',
+    --   '<cmd>Telescope lsp_references<CR>',
+    --   "n",
+    --   desc = "Search references(all)",
+    --   noremap = true,
+    --   silent = true
+    -- },
+    -- {
+    --   '<leader>si',
+    --   '<cmd>Telescope lsp_incoming_calls<CR>',
+    --   "n",
+    --   desc = "Search references(incoming)",
+    --   noremap = true,
+    --   silent = true
+    -- },
+    -- {
+    --   '<leader>so',
+    --   '<cmd>Telescope lsp_outgoing_calls<CR>',
+    --   "n",
+    --   desc = "Search references(outgoing)",
+    --   noremap = true,
+    --   silent = true
+    -- },
     {
       '<leader>ss',
       '<cmd>Telescope lsp_document_symbols<CR>',
@@ -162,7 +162,7 @@ return {
       silent = true
     },
     {
-      '<leader>SS',
+      '<leader>sS',
       '<cmd>Telescope lsp_workspace_symbols<CR>',
       "n",
       desc = "Search symbols(global)",
@@ -185,30 +185,30 @@ return {
       noremap = true,
       silent = true
     },
-    {
-      '<leader>gi',
-      '<cmd>Telescope lsp_implementations<CR>',
-      "n",
-      desc = "Go to implementation",
-      noremap = true,
-      silent = true
-    },
-    {
-      '<leader>gd',
-      '<cmd>Telescope lsp_definitions theme=cursor<CR>',
-      "n",
-      desc = "Go to definition",
-      noremap = true,
-      silent = true
-    },
-    {
-      '<leader>gt',
-      '<cmd>Telescope lsp_type_definitions theme=cursor<CR>',
-      "n",
-      desc = "Go to type definition",
-      noremap = true,
-      silent = true
-    },
+    -- {
+    --   '<leader>gi',
+    --   '<cmd>Telescope lsp_implementations<CR>',
+    --   "n",
+    --   desc = "Go to implementation",
+    --   noremap = true,
+    --   silent = true
+    -- },
+    -- {
+    --   '<leader>gd',
+    --   '<cmd>Telescope lsp_definitions theme=cursor<CR>',
+    --   "n",
+    --   desc = "Go to definition",
+    --   noremap = true,
+    --   silent = true
+    -- },
+    -- {
+    --   '<leader>gt',
+    --   '<cmd>Telescope lsp_type_definitions theme=cursor<CR>',
+    --   "n",
+    --   desc = "Go to type definition",
+    --   noremap = true,
+    --   silent = true
+    -- },
 
 
 

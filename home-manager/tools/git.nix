@@ -1,11 +1,14 @@
-{ ... }: {
+{ ... }:
+{
   programs.git = {
     enable = true;
     diff-so-fancy.enable = true;
+    userEmail = "marcin.szymczak@dolby.com";
+    userName = "Marcin Szymczak";
     lfs.enable = true;
     signing = {
       format = "openpgp";
-      signByDefault = true;
+      signByDefault = false;
     };
     extraConfig = {
       status = {
@@ -14,7 +17,9 @@
         showStash = true;
       };
 
-      branch = { sort = "-commiterdate"; };
+      branch = {
+        sort = "-commiterdate";
+      };
       pull = {
         rebase = true;
         default = "current";
@@ -39,6 +44,7 @@
       "build/"
       ".env"
       ".env*"
+      ".cache"
     ];
 
   };
