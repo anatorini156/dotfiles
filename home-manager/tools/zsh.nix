@@ -33,14 +33,14 @@
     initContent = ''
       hms() {
           pushd ~/.config/home-manager/
-          git add -f .
+          git add .
           home-manager switch
           popd
       }
 
       hmc() {
           pushd ~/.config/home-manager/
-          git add -f .
+          git add .
           git commit
           git push
           popd

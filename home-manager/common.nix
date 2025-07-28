@@ -5,6 +5,7 @@
   ...
 }:
 let
+  common = import ./packages/common.nix {inherit pkgs; };
   languages = import ./packages/languages.nix { inherit pkgs; };
   linux_cli_packages = import ./packages/linux-cli.nix { inherit pkgs; };
   darwin_cli_packages = import ./packages/darwin-cli.nix { inherit pkgs; };
@@ -34,6 +35,7 @@ in
     with pkgs;
     [
     ]
+    ++ common
     ++ languages
     ++ (if settings.system == "x86_64-darwin" then darwin_packages else [ ])
     ++ (if settings.system == "x86_64-linux" then linux_packages else [ ]);
