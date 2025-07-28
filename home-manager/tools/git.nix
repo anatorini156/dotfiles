@@ -3,8 +3,6 @@
   programs.git = {
     enable = true;
     diff-so-fancy.enable = true;
-    userEmail = "marcin.szymczak@dolby.com";
-    userName = "Marcin Szymczak";
     lfs.enable = true;
     signing = {
       format = "openpgp";

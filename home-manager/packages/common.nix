@@ -1,0 +1,23 @@
+{pkgs,...}:
+with pkgs; [
+
+      nerd-fonts.jetbrains-mono
+      delta
+      bat
+      zoxide
+      pyenv
+      dua
+      dust
+      fzf
+      ripgrep
+      ripgrep-all
+      tdf
+      neovim
+      fd
+      obsidian
+      cargo
+      tldr
+      kitty
+      felix-fm
+      fastfetch
+]

@@ -1,25 +1,29 @@
 {
-  username,
   pkgs,
-  system,
+  zen,
+  settings,
   ...
 }:
 let
   languages = import ./packages/languages.nix { inherit pkgs; };
-  linux_packages = import ./packages/linux.nix { inherit pkgs; };
-  darwin_packages = import ./packages/darwin.nix { inherit pkgs; };
+  linux_cli_packages = import ./packages/linux-cli.nix { inherit pkgs; };
+  darwin_cli_packages = import ./packages/darwin-cli.nix { inherit pkgs; };
+  linux_gui_packages = import ./packages/gui-linux.nix { inherit pkgs; inherit zen; };
+  darwin_gui_packages = import ./packages/gui-darwin.nix { inherit pkgs; };
+
+  linux_packages = linux_cli_packages ++ (if settings.guiApps then linux_gui_packages else [ ]);
+  darwin_packages = darwin_cli_packages ++ (if settings.guiApps then darwin_gui_packages else [ ]);
 in
 {
   imports = [
     ./tools/default.nix
-
   ]
-  ++ (if system == "x86_64-darwin" then [ ./platforms/darwin.nix ] else [ ])
-  ++ (if system == "x86_64-linux" then [ ./platforms/linux.nix ] else [ ]);
+  ++ (if settings.system == "x86_64-darwin" then [ ./platforms/darwin.nix ] else [ ])
+  ++ (if settings.system == "x86_64-linux" then [ ./platforms/linux.nix ] else [ ]);
+
 
   nixpkgs.config.allowUnfree = true;
-
-  home.username = username;
+  home.username = settings.username;
 
   programs.home-manager.enable = true;
 
@@ -29,33 +33,14 @@ in
   home.packages =
     with pkgs;
     [
-      nerd-fonts.jetbrains-mono
-      delta
-      bat
-      zoxide
-      pyenv
-      dua
-      dust
-      fzf
-      ripgrep
-      ripgrep-all
-      tdf
-      neovim
-      fd
-      obsidian
-      cargo
-      tldr
-      kitty
-      felix-fm
-      fastfetch
     ]
     ++ languages
-    ++ (if system == "x86_64-darwin" then darwin_packages else [ ])
-    ++ (if system == "x86_64-linux" then linux_packages else [ ]);
+    ++ (if settings.system == "x86_64-darwin" then darwin_packages else [ ])
+    ++ (if settings.system == "x86_64-linux" then linux_packages else [ ]);
 
   home.file = {
     ".username".text = ''
-      ${username}
+      ${settings.username}
     '';
 
     # ".config/discord/settings.json".text = ''

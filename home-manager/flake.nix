@@ -8,29 +8,35 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    {
+      nixpkgs,
+      home-manager,
+      zen-browser,
+      ...
+    }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      settings = import ./host.nix;
+      pkgs = nixpkgs.legacyPackages.${settings.system};
     in
     {
-      homeConfigurations."mxszym" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."${settings.username}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./common.nix ];
-
+        modules = [
+          ./common.nix
+          ./accounts/${settings.username}.nix
+        ];
         extraSpecialArgs = {
-          system = system;
-          username = "mxszym";
+          settings = settings;
+          zen = zen-browser;
         };
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
       };
     };
 }
