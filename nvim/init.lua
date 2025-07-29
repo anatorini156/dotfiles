@@ -15,7 +15,7 @@ vim.o.smartindent = true
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.wrap = false
 vim.opt.scrolloff = 15
-
+vim.opt.undofile = true
 vim.g.disable_autoformat = true
 
 require("config.lazy")

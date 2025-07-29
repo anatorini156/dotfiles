@@ -15,3 +15,12 @@ end, { desc = "Enable Auto-Format" })
 vim.api.nvim_create_user_command("FormatDisable", function()
 	vim.g.disable_autoformat = true
 end, { desc = "Disable Auto-Format" })
+
+
+vim.api.nvim_create_user_command("Wrap", function()
+	vim.opt.wrap = true
+end, { desc = "Enable Line Wrap" })
+
+vim.api.nvim_create_user_command("NoWrap", function()
+  vim.opt.wrap = false
+end, { desc = "Disable Line Wrap" })

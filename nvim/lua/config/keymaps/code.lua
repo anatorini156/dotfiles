@@ -4,3 +4,7 @@ vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = 
 vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "si", "<cmd>Telescope lsp_incoming_calls<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "so", "<cmd>Telescope lsp_outgoing_calls<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "ch", function()
+  vim.lsp.buf.clear_references()
+	vim.lsp.buf.document_highlight()
+end, { noremap = true, silent = true })
