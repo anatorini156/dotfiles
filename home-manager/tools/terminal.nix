@@ -37,6 +37,7 @@
       inactive_tab_background = "#191724";
       active_border_color = "#31748f";
       inactive_border_color = "#403d52";
+      hide_window_decorations = "yes";
 
     };
   };

@@ -17,6 +17,7 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 15
 vim.opt.undofile = true
 vim.g.disable_autoformat = true
+vim.wo.cursorline = true
 
 require("config.lazy")
 require("config.keymaps.index")
