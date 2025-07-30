@@ -32,7 +32,10 @@ return {
 
 		require("lualine").setup({
 			options = {
-        disabled_filetypes = {"NvimTree"},
+				disabled_filetypes = {
+					statusline = { "NvimTree" },
+				},
+				ignore_focus = { "NvimTree" },
 				theme = bubbles_theme,
 				component_separators = "",
 				section_separators = { left = "", right = "" },
@@ -41,7 +44,9 @@ return {
 				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
 				lualine_b = { "filename", "branch" },
 				lualine_c = {
-					"%=", --[[ add your center components here in place of this comment ]]
+					function()
+						return require("nvim-navic").get_location()
+					end
 				},
 				lualine_x = {},
 				lualine_y = { "filetype", "progress" },
@@ -58,7 +63,8 @@ return {
 				lualine_z = { "location" },
 			},
 			tabline = {},
-			extensions = {'nvim-tree'},
+			globalstatus = true,
+			extensions = { "nvim-tree" },
 		})
 	end,
 }

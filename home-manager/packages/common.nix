@@ -1,6 +1,6 @@
 {pkgs,...}:
 with pkgs; [
-
+      tree
       nerd-fonts.jetbrains-mono
       delta
       bat

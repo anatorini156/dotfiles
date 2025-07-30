@@ -27,5 +27,6 @@ with pkgs;
   zls
 
   kotlin-language-server
-
+ 
+  java-language-server
 ]

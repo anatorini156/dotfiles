@@ -9,12 +9,19 @@ local servers = {
 	"cssls",
 	"html",
 	"yamlls",
-	"zls",
 	"kotlin_language_server",
+  "java_language_server",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({})
 end
+
+lspconfig.zls.setup({
+	on_attach = function(client, bufnr)
+		local navic = require("nvim-navic")
+		navic.attach(client, bufnr)
+	end,
+})
 
 lspconfig.nil_ls.setup({
 	--    settings = {
