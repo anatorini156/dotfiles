@@ -40,8 +40,22 @@ return {
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 			},
+      inactive_winbar = {
+        lualine_c = {
+          {
+            function ()
+              return " "
+            end
+          },
+        },
+      },
 			winbar = {
 				lualine_c = {
+          {
+            function ()
+              return " "
+            end
+          },
 					{
 						function()
 							return require("nvim-navic").get_location()

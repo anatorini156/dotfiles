@@ -16,7 +16,6 @@
       };
 
       branch = {
-        sort = "-commiterdate";
       };
       pull = {
         rebase = true;
