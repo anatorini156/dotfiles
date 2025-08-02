@@ -78,6 +78,7 @@
     ];
     packages = with pkgs; [
       zsh
+git
     ];
     shell = pkgs.zsh;
   };
@@ -93,6 +94,9 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.blur-my-shell
     gnome-tweaks
+       open-vm-tools
+    albert
+
   ];
 
   programs.gnupg.agent = {
@@ -114,6 +118,7 @@
 
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
   hardware.logitech.wireless.enable = true;
+ services.vmwareGuest.enable = true;
 
 
 

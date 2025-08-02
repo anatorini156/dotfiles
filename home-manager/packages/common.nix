@@ -22,4 +22,5 @@ with pkgs; [
       fastfetch
       devenv
       btop
+      wget
 ]
