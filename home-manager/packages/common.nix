@@ -23,4 +23,5 @@ with pkgs; [
       devenv
       btop
       wget
+      zlib
 ]

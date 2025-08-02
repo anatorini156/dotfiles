@@ -12,11 +12,13 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-python.url = "github:cachix/nixpkgs-python";
   };
 
   outputs =
     {
       nixpkgs,
+      nixpkgs-python,
       home-manager,
       zen-browser,
       ...
@@ -34,6 +36,7 @@
           ./accounts/${settings.username}.nix
         ];
         extraSpecialArgs = {
+          python_pkgs = nixpkgs-python;
           settings = settings;
           zen = zen-browser;
         };

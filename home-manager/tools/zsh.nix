@@ -1,8 +1,8 @@
 { username, ... }: {
   programs.zsh = {
     enable = true;
-    dotDir = ".config/zsh";
     zprof.enable = false;
+    dotDir = ".config/zsh";
     shellAliases = {
       cat = "bat --paging=never";
       lv = "lsd -1";
@@ -13,6 +13,8 @@
       gc = "git commit -S -m";
       ga = "git add";
       discord = "discord --no-sandbox";
+      lg = "lazygit";
+      nv = "nvim .";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
@@ -21,6 +23,7 @@
     oh-my-zsh = {
       enable = true;
       theme = "bira";
+      custom = "$HOME/.config/omz-custom";
       plugins =
         [ "git" "colored-man-pages" "nvm" ];
       extraConfig = ''

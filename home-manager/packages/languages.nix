@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,python_pkgs, ... }:
 with pkgs;
 [
   lua
