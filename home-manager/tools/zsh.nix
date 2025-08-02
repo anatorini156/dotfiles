@@ -2,6 +2,7 @@
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
+    zprof.enable = false;
     shellAliases = {
       cat = "bat --paging=never";
       lv = "lsd -1";
@@ -21,7 +22,7 @@
       enable = true;
       theme = "bira";
       plugins =
-        [ "git" "colored-man-pages" "nvm" "git-auto-fetch" "git-prompt" "fzf" ];
+        [ "git" "colored-man-pages" "nvm" ];
       extraConfig = ''
         zstyle ':omz:update' mode disabled  
         zstyle ':omz:plugins:nvm' lazy yes

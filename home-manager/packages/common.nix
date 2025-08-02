@@ -20,4 +20,6 @@ with pkgs; [
       kitty
       felix-fm
       fastfetch
+      devenv
+      btop
 ]

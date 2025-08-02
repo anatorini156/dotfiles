@@ -12,7 +12,6 @@ with pkgs;
   typescript
   typescript-language-server
 
-  python312
   pyright
   black
 

@@ -8,6 +8,7 @@
     "nix-command"
     "flakes"
   ];
+  nix.settings.trusted-users = [ "root" "anatorini" ];
   # Bootloader.
    boot.loader.grub.enable = true;
    boot.loader.grub.device = "nodev";
