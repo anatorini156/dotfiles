@@ -86,6 +86,7 @@
             setup() {
               template=$(ls ~/.config/templates | fzf)
               cp -i -r "$HOME/.config/templates/$template/"{.,}* .
+              git init
             }
 
             export EDITOR="nvim"
