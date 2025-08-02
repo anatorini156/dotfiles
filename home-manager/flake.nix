@@ -32,7 +32,7 @@
         inherit pkgs;
 
         modules = [
-          ./common.nix
+          ./configuration.nix
           ./accounts/${settings.username}.nix
         ];
         extraSpecialArgs = {

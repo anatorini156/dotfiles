@@ -5,7 +5,6 @@ with pkgs; [
       delta
       bat
       zoxide
-      pyenv
       dua
       dust
       fzf
@@ -15,7 +14,6 @@ with pkgs; [
       neovim
       fd
       obsidian
-      cargo
       tldr
       kitty
       felix-fm

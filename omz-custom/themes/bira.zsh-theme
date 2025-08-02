@@ -14,17 +14,22 @@ else
     local kube_prompt=''
 fi
 
-get_venv_name(){
-  if [[ -n $VIRTUAL_ENV ]];
+get_dev_env_name(){
+  if [[ -n $DEV_SHELL ]];
   then
-    echo "[%B%{$fg[cyan]%}$(basename "${VIRTUAL_ENV}")%{$reset_color%}] "
+    echo "[%B%{$fg[cyan]%}${DEV_SHELL}%{$reset_color%}] "
+  else
+    if [[ -n $VIRTUAL_ENV ]];
+    then
+      echo "[%B%{$fg[cyan]%}$(basename "${VIRTUAL_ENV}")%{$reset_color%}] "
+    fi
   fi
 }
 
 
 ZSH_THEME_RVM_PROMPT_OPTIONS="i v g"
 
-PROMPT="╭─${user_host}\$(get_venv_name)${current_dir}${rvm_ruby}${vcs_branch}${kube_prompt}
+PROMPT="╭─${user_host}\$(get_dev_env_name)${current_dir}${rvm_ruby}${vcs_branch}${kube_prompt}
 ╰─%B${user_symbol}%b "
 RPROMPT="%B${return_code}%b"
 

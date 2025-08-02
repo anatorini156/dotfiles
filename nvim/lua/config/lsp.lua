@@ -11,6 +11,7 @@ local servers = {
 	"yamlls",
 	"kotlin_language_server",
   "java_language_server",
+  "bashls",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({})

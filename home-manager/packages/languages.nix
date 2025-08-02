@@ -5,20 +5,21 @@ with pkgs;
   lua-language-server
   stylua
 
-  nil # Nix language server
+  nil 
   nixfmt-rfc-style # Nix formatter
 
   nodejs_24
   typescript
   typescript-language-server
-
+  
+  python312
   pyright
   black
 
   clang-tools
   cmake
 
-  vscode-langservers-extracted # LSP for css,html,json,md
+  vscode-langservers-extracted
 
   yaml-language-server
 
@@ -28,4 +29,8 @@ with pkgs;
   kotlin-language-server
  
   java-language-server
+
+  cargo
+
+  bash-language-server
 ]

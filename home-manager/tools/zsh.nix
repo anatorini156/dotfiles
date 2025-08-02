@@ -1,4 +1,5 @@
-{ username, ... }: {
+{ username, ... }:
+{
   programs.zsh = {
     enable = true;
     zprof.enable = false;
@@ -15,6 +16,7 @@
       discord = "discord --no-sandbox";
       lg = "lazygit";
       nv = "nvim .";
+      devsh = "devenv shell";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
@@ -24,8 +26,11 @@
       enable = true;
       theme = "bira";
       custom = "$HOME/.config/omz-custom";
-      plugins =
-        [ "git" "colored-man-pages" "nvm" ];
+      plugins = [
+        "git"
+        "colored-man-pages"
+        "nvm"
+      ];
       extraConfig = ''
         zstyle ':omz:update' mode disabled  
         zstyle ':omz:plugins:nvm' lazy yes
@@ -35,51 +40,56 @@
     };
 
     initContent = ''
-      hms() {
-          pushd ~/.config/home-manager/
-          git add .
-          home-manager switch
-          popd
-      }
+            hms() {
+                pushd ~/.config/home-manager/
+                git add .
+                home-manager switch
+                popd
+            }
 
-      hmc() {
-          pushd ~/.config/home-manager/
-          git add .
-          git commit
-          git push
-          popd
-      }
+            hmc() {
+                pushd ~/.config/home-manager/
+                git add .
+                git commit
+                git push
+                popd
+            }
 
-      hme() {
-          $EDITOR ~/.config/home-manager/
-      }
+            hme() {
+                $EDITOR ~/.config/home-manager/
+            }
 
-      ose() {
-          $EDITOR ~/.config/nixos/configuration.nix
-      }
+            ose() {
+                $EDITOR ~/.config/nixos/configuration.nix
+            }
 
-      oss() {
-          sudo nixos-rebuild switch
-      }
+            oss() {
+                sudo nixos-rebuild switch
+            }
 
-      osc() {
-          pushd ~/.config/nixos/
-          git add -f .
-          git commit
-          git push
-          popd
-      }
+            osc() {
+                pushd ~/.config/nixos/
+                git add -f .
+                git commit
+                git push
+                popd
+            }
 
-      port() {
-          sudo lsof -i :$1
-      }
+            port() {
+                sudo lsof -i :$1
+            }
 
-      nve() {
-        $EDITOR ~/.config/nvim/
-      }
+            nve() {
+              $EDITOR ~/.config/nvim/
+            }
 
-      export EDITOR="nvim"
-      source <(command fx --init)
+            setup() {
+              template=$(ls ~/.config/templates | fzf)
+              cp -i -r "$HOME/.config/templates/$template/"{.,}* .
+            }
+
+            export EDITOR="nvim"
+            source <(command fx --init)
 
     '';
 
