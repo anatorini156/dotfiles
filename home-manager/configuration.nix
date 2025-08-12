@@ -57,15 +57,16 @@ in
     #   }
     # '';
   };
-  wayland.windowManager.sway = {
+  wayland.windowManager.hyprland = {
     enable = true;
-    wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
-    config = rec {
-      modifier = "Mod4";
-      # Use kitty as default terminal
-      terminal = "kitty";
-      startup = [
-        { command = "kitty"; }
+    settings = {
+      "$mod" = "SUPER";
+
+      bindm = [
+        # mouse movements
+        # "$mod, mouse:272, movewindow"
+        # "$mod, mouse:273, resizewindow"
+        # "$mod ALT, mouse:272, resizewindow"
       ];
     };
   };
