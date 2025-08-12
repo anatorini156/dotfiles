@@ -1,0 +1,32 @@
+{ pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    vim
+    neovim
+    logitech-udev-rules
+    solaar
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.blur-my-shell
+    gnome-tweaks
+    open-vm-tools
+    albert
+    gjs
+  ];
+  environment.gnome.excludePackages = with pkgs; [
+    epiphany
+    gedit
+    totem
+    yelp
+    geary
+    gnome-calendar
+    gnome-contacts
+    gnome-console
+    gnome-maps
+    gnome-music
+    gnome-text-editor
+    pkgs.gnome-photos
+    pkgs.gnome-tour
+    evince
+    xterm
+  ];
+}
