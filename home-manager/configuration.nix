@@ -58,9 +58,9 @@ in
     # '';
   };
   wayland.windowManager.hyprland = {
-    enable = true;
+    enable = false;
     settings = {
-      "$mod" = "SUPER";
+      "$mainMod" = "SUPER";
 
       bindm = [
         # mouse movements

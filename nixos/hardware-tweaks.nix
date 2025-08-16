@@ -8,6 +8,15 @@
         libvdpau-va-gl
       ];
     };
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+          Experimental = true; 
+        };
+      };
+    };
     sensor.iio.enable = true;
     logitech.wireless.enable = true;
   };

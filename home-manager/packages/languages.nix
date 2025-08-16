@@ -33,4 +33,6 @@ with pkgs;
   cargo
 
   bash-language-server
+
+  go
 ]

@@ -11,6 +11,13 @@
     open-vm-tools
     albert
     gjs
+    wofi
+    rofi
+    waybar
+    blueberry
+    networkmanagerapplet
+    brightnessctl
+    hyprlock
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany

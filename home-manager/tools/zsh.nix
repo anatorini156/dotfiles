@@ -56,11 +56,19 @@
             }
 
             hme() {
-                $EDITOR ~/.config/home-manager/
+                pushd ~/.config/home-manager/
+                $EDITOR .
+                git add .
+                git commit -m "Home-manager $(LC_TIME=en_US.UTF-8 date)"
+                popd
             }
 
             ose() {
-                $EDITOR ~/.config/nixos/configuration.nix
+                pushd ~/.config/nixos/
+                $EDITOR .
+                git add .
+                git commit -m "NixOS $(LC_TIME=en_US.UTF-8 date)"
+                popd
             }
 
             oss() {

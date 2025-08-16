@@ -22,4 +22,9 @@ with pkgs; [
       btop
       wget
       zlib
+      nodemon
+      inotify-tools
+      lsof
+      dig
+      inetutils
 ]
