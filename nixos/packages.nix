@@ -7,6 +7,7 @@
     solaar
     gnomeExtensions.dash-to-dock
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.hibernate-status-button
     gnome-tweaks
     open-vm-tools
     albert
@@ -18,6 +19,8 @@
     networkmanagerapplet
     brightnessctl
     hyprlock
+    firefox
+    wireguard-tools
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany

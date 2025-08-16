@@ -34,40 +34,40 @@ return {
 			options = {
 				disabled_filetypes = {
 					statusline = { "NvimTree" },
+					winbar = { "NvimTree" },
 				},
 				ignore_focus = { "NvimTree" },
 				theme = bubbles_theme,
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 			},
-      inactive_winbar = {
+      winbar = {
         lualine_c = {
           {
-            function ()
+            function()
               return " "
-            end
+            end,
+          },
+          {
+            function()
+              return require("nvim-navic").get_location() or " "
+            end,
           },
         },
       },
-			winbar = {
-				lualine_c = {
+      inactive_winbar = {
+        lualine_c = {
           {
-            function ()
+            function()
               return " "
-            end
+            end,
           },
-					{
-						function()
-							return require("nvim-navic").get_location() or " "
-						end
-					},
-				},
-			},
+        },
+      },
 			sections = {
 				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
 				lualine_b = { "filename", { "branch", separator = { left = "|" } } },
-				lualine_c = {
-				},
+				lualine_c = {},
 				lualine_x = {},
 				lualine_y = { "filetype", "progress" },
 				lualine_z = {

@@ -9,7 +9,8 @@
     };
     sleep = {
       extraConfig = ''
-        HibernateDelaySec=1h
+        HibernateDelaySec=30m
+        SuspendState=mem
       '';
     };
   };

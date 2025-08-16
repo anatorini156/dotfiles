@@ -62,4 +62,8 @@
   };
   virtualisation.vmware.guest.enable = true;
 
+  environment.etc."wireguard" = {
+      source = "/home/anatorini/.wg";
+    };
+
 }
