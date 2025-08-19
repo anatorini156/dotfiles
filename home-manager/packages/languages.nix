@@ -29,7 +29,7 @@ with pkgs;
   kotlin-language-server
  
   java-language-server
-  temurin-jre-bin--21
+  jre21_minimal
 
   cargo
 
