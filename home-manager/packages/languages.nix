@@ -35,4 +35,5 @@ with pkgs;
   bash-language-server
 
   go
+  android-tools
 ]
