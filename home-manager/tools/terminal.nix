@@ -21,7 +21,7 @@
       "alt+4" = "goto_tab 4";
       "alt+5" = "goto_tab 5";
     };
-    themeFile = "rose-pine";
+    themeFile = "Catppuccin-Mocha";
     settings = {
       tab_bar_style = "powerline";
       tab_powerline_style = "round";
