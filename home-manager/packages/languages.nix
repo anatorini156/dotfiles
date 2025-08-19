@@ -29,6 +29,7 @@ with pkgs;
   kotlin-language-server
  
   java-language-server
+  temurin-jre-21
 
   cargo
 
