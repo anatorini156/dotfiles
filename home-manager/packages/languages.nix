@@ -29,7 +29,6 @@ with pkgs;
   kotlin-language-server
  
   java-language-server
-  jre21_minimal
 
   cargo
 
