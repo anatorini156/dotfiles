@@ -3,17 +3,17 @@
 
   services = {
     dbus.packages = [
-      #pkgs.gnome-keyring
+      pkgs.gnome-keyring
       pkgs.gcr
     ];
     fprintd.enable = true;
     fprintd.tod.enable = true;
-    #gnome.gnome-keyring.enable = true;
+    gnome.gnome-keyring.enable = true;
     fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
     xserver = {
       enable = true;
       displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = false;
+      desktopManager.gnome.enable = true;
       xkb = {
         layout = "pl";
         variant = "";

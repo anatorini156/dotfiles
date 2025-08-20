@@ -21,6 +21,7 @@
     hyprlock
     firefox
     wireguard-tools
+    nextcloud-client
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
