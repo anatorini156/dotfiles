@@ -34,6 +34,7 @@
     blueman.enable = true;
     power-profiles-daemon.enable = true;
     logind.lidSwitch  = "suspend-then-hibernate";
+    flatpak.enable = true;
   };
 
 }
