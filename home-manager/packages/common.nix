@@ -26,4 +26,5 @@ with pkgs; [
       lsof
       dig
       inetutils
+      conan
 ]
