@@ -28,5 +28,4 @@ with pkgs; [
       inetutils
       conan
       doxygen
-      docker
 ]
