@@ -27,4 +27,5 @@ with pkgs; [
       dig
       inetutils
       conan
+      doxygen
 ]
