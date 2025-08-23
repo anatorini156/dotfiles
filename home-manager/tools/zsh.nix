@@ -47,6 +47,7 @@
                 pushd ~/.config/home-manager/
                 git add .
                 home-manager switch
+                git restore --staged host.nix
                 popd
             }
 
