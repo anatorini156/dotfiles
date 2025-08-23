@@ -24,11 +24,6 @@ function JumpTree.goToDefinition()
     t2 = vim.treesitter.get_node_text(p2,0)
   end
 	if node then
-		print(
-      vim.treesitter.get_node_text(node, 0),
-      t1,
-      t2
-    )
 		JumpTree.add_symbol(vim.treesitter.get_node_text(node, 0))
 	end
 	vim.lsp.buf.definition()
@@ -42,9 +37,12 @@ function JumpTree.setup()
 			JumpTree.open()
 		end
 	end, { desc = "Open the Jump Tree ", silent = true })
-	vim.keymap.set("n", "gd", function()
+	vim.keymap.set("n", "gD", function()
 		JumpTree.goToDefinition()
 	end, { noremap = true, silent = true })
+  vim.keymap.set("n", "gd", function()
+    vim.lsp.buf.definition()
+  end, { noremap = true, silent = true })
 end
 
 function JumpTree.add_symbol(symbol)
