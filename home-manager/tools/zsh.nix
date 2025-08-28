@@ -17,6 +17,7 @@
       lg = "lazygit";
       nv = "nvim .";
       devsh = "devenv shell";
+      icat = "kitten icat";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
