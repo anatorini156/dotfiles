@@ -28,6 +28,7 @@ with pkgs;
 
   kotlin-language-server
   gradle
+  kotlin
  
   java-language-server
   maven
