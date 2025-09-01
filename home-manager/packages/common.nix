@@ -28,5 +28,5 @@ with pkgs; [
       inetutils
       conan
       doxygen
-      youtube-dl
+      yt-dlp
 ]
