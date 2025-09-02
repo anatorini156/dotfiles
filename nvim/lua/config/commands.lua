@@ -24,3 +24,9 @@ end, { desc = "Enable Line Wrap" })
 vim.api.nvim_create_user_command("NoWrap", function()
   vim.opt.wrap = false
 end, { desc = "Disable Line Wrap" })
+
+vim.api.nvim_create_autocmd({ "RecordingEnter", "RecordingLeave" }, {
+  callback = function()
+    require("lualine").refresh()
+  end,
+})

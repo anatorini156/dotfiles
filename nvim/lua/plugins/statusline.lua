@@ -41,34 +41,43 @@ return {
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 			},
-      winbar = {
-        lualine_c = {
-          {
-            function()
-              return " "
-            end,
-          },
-          {
-            function()
-              return require("nvim-navic").get_location() or " "
-            end,
-          },
-        },
-      },
-      inactive_winbar = {
-        lualine_c = {
-          {
-            function()
-              return " "
-            end,
-          },
-        },
-      },
+			winbar = {
+				lualine_c = {
+					{
+						function()
+							return " "
+						end,
+					},
+					{
+						function()
+							return require("nvim-navic").get_location() or " "
+						end,
+					},
+				},
+			},
+			inactive_winbar = {
+				lualine_c = {
+					{
+						function()
+							return " "
+						end,
+					},
+				},
+			},
 			sections = {
 				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
 				lualine_b = { "filename", { "branch", separator = { left = "|" } } },
 				lualine_c = {},
-				lualine_x = {},
+				lualine_x = {
+					function()
+						local rec_reg = vim.fn.reg_recording()
+						if rec_reg == "" then
+							return ""
+						else
+							return "recording @" .. rec_reg
+						end
+					end,
+				},
 				lualine_y = { "filetype", "progress" },
 				lualine_z = {
 					{ "location", separator = { right = "" }, left_padding = 2 },

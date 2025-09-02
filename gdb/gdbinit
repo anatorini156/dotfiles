@@ -1,0 +1,11 @@
+set auto-load safe-path /
+
+
+set pagination off
+set print pretty on
+set confirm off
+set history save on
+
+set tui on
+set $64BITS = 1
+set prompt \033[31mgdb$ \033[0m
