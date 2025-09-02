@@ -1,7 +1,7 @@
 {
-  username = "mxszym";
-  profile = "work";
-  system = "aarch64-darwin";
+  username = "anatorini";
+  profile = "personal";
+  system = "x86_64-linux";
   guiApps = false;
 }
 
