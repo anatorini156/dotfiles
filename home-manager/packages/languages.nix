@@ -27,6 +27,7 @@ with pkgs;
   zls
 
   kotlin-language-server
+  gradle
  
   java-language-server
   maven
