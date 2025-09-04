@@ -30,4 +30,5 @@ with pkgs; [
       doxygen
       yt-dlp
       awscli2
+      ffmpeg
 ]
