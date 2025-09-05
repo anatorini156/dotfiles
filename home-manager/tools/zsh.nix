@@ -18,6 +18,7 @@
       nv = "nvim .";
       devsh = "devenv shell";
       icat = "kitten icat";
+      fa = "fd -IH";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
