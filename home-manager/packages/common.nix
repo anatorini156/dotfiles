@@ -32,4 +32,5 @@ with pkgs; [
       awscli2
       ffmpeg
       jq
+      valgrind
 ]
