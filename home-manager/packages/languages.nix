@@ -18,6 +18,7 @@ with pkgs;
 
   clang-tools
   cmake
+  cmake-language-server
 
   vscode-langservers-extracted
 
