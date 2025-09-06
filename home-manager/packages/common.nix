@@ -33,4 +33,5 @@ with pkgs; [
       ffmpeg
       jq
       valgrind
+      cloc
 ]
