@@ -31,4 +31,5 @@ with pkgs; [
       yt-dlp
       awscli2
       ffmpeg
+      jq
 ]
