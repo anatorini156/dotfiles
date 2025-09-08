@@ -2,7 +2,7 @@
 {
   systemd = {
     user.services.ulauncher = {
-      enable = true;
+      enable = false;
       description = "Ulauncher (user-level)";
       serviceConfig.ExecStart = "${pkgs.ulauncher}/bin/ulauncher";
       wantedBy = [ "default.target" ];
