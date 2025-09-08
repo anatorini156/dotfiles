@@ -1,6 +1,12 @@
 { pkgs, ... }:
 {
   systemd = {
+    user.services.ulauncher = {
+      enable = true;
+      description = "Ulauncher (user-level)";
+      serviceConfig.ExecStart = "${pkgs.ulauncher}/bin/ulauncher";
+      wantedBy = [ "default.target" ];
+    };
     services = {
       fprintd = {
         wantedBy = [ "multi-user.target" ];
