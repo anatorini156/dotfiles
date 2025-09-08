@@ -13,7 +13,7 @@ with pkgs;
   typescript-language-server
   
   python312
-  python312Packages.pip
+  python312Packages.psutil
   pyright
   black
 
