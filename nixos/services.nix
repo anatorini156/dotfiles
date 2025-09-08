@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  ulauncherPkg = pkgs.ulauncher;
+in
 {
 
   services = {
@@ -33,8 +36,25 @@
     };
     blueman.enable = true;
     power-profiles-daemon.enable = true;
-    logind.lidSwitch  = "suspend-then-hibernate";
+    logind.lidSwitch = "suspend-then-hibernate";
     flatpak.enable = true;
+    ulauncher = {
+      enable = true;
+      description = "Ulauncher application launcher";
+      # Optional: run after graphical.target if needed
+      after = [ "graphical.target" ];
+      wantedBy = [ "default.target" ];
+
+      serviceConfig = {
+        ExecStart = "${ulauncherPkg}/bin/ulauncher";
+        Restart = "on-failure";
+        RestartSec = "5s";
+        Type = "simple";
+      };
+
+     
+      path = [ ulauncherPkg ];
+    };
   };
 
 }
