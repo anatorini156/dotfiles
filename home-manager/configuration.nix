@@ -33,13 +33,6 @@ in
 
   fonts.fontconfig.enable = true;
   home.stateVersion = "25.05";
-  environment.systemPackages = with pkgs; [
-    (python312.withPackages (
-      ps: with ps; [
-        psutil
-      ]
-    ))
-  ];
 
   home.packages =
     with pkgs;
