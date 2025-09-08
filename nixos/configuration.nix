@@ -57,13 +57,21 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
+
+  environment.systemPackages = with pkgs; [
+    (python311.withPackages (
+      ps: with ps; [
+        psutil
+      ]
+    ))
+  ];
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
   };
   virtualisation.vmware.guest.enable = true;
 
   environment.etc."wireguard" = {
-      source = "/home/anatorini/.wg";
-    };
+    source = "/home/anatorini/.wg";
+  };
 
 }
