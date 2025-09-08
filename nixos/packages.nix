@@ -10,18 +10,14 @@
     gnomeExtensions.hibernate-status-button
     gnome-tweaks
     open-vm-tools
-    albert
     gjs
-    wofi
-    rofi
-    waybar
     blueberry
     networkmanagerapplet
     brightnessctl
-    hyprlock
     firefox
     wireguard-tools
     nextcloud-client
+    anyrun
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
