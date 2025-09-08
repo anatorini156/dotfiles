@@ -17,7 +17,7 @@
     firefox
     wireguard-tools
     nextcloud-client
-    anyrun
+    ulauncher
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
