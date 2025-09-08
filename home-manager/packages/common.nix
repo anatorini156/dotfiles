@@ -34,4 +34,5 @@ with pkgs; [
       jq
       valgrind
       cloc
+      psutils
 ]
