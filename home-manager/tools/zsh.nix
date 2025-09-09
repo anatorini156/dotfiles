@@ -19,6 +19,7 @@
       devsh = "devenv shell";
       icat = "kitten icat";
       fa = "fd -IH";
+      rp = "rg --passthrough";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
