@@ -45,6 +45,7 @@
       ".env*"
       ".cache"
       ".settings/"
+      "*.patch"
     ];
 
   };
