@@ -42,6 +42,7 @@
       ".env"
       ".env*"
       ".cache"
+      ".settings/"
     ];
 
   };
