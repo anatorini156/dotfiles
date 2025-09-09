@@ -30,7 +30,7 @@ with pkgs;
   gradle
   kotlin
  
-  java-language-server
+  jdtls
   maven
 
   cargo
