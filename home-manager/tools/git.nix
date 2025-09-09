@@ -31,6 +31,8 @@
       ""
       ".venv/"
       ".mypy_cache/"
+      ".classpath"
+      ".project"
       ".pytest_cache/"
       "__pycache__/"
       ".hypothesis/"
