@@ -18,6 +18,7 @@
     wireguard-tools
     nextcloud-client
     ulauncher
+    steam
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
