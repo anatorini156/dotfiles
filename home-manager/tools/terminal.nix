@@ -21,7 +21,7 @@
       "alt+4" = "goto_tab 4";
       "alt+5" = "goto_tab 5";
     };
-    themeFile = "Monokai Pro (Filter Octagon)";
+    themeFile = "Monokai_Pro_(Filter_Octagon)";
     settings = {
       tab_bar_style = "powerline";
       tab_powerline_style = "round";
