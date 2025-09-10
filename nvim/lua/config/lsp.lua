@@ -12,6 +12,7 @@ local servers = {
 	"kotlin_language_server",
 	"java_language_server",
 	"bashls",
+  "cmake",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({})
