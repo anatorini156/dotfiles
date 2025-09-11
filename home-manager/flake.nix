@@ -38,7 +38,7 @@
               modules = [
                 ./configuration.nix
                 ./systems/${system}.nix
-                ./accounts/${username}.nix
+                ./accounts/${builtins.head (pkgs.lib.strings.splitString "@" username)}.nix
                 ./hosts/${host}.nix
               ];
               extraSpecialArgs = {
