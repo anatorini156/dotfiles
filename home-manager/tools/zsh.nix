@@ -6,6 +6,7 @@
     dotDir = ".config/zsh";
     shellAliases = {
       cat = "bat --paging=never";
+      catp = "bat";
       lv = "lsd -1";
       ff = ''fzf --preview "batcat --color=always  {}"'';
       gs = "git status";
