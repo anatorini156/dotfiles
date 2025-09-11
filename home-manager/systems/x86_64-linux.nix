@@ -1,6 +1,9 @@
-{ settings, ... }:
+{ username, ... }:
 
 {
-  home.username = settings.username;
-  home.homeDirectory = "/home/${settings.username}";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
+  programs.pyenv = {
+    rootDirectory = "/home/${username}/.pyenv";
+  };
 }

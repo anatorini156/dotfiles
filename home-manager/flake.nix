@@ -24,18 +24,21 @@
       ...
     }:
     let
-      username = builtins.getEnv "HOST";
-      system = builtins.currentSystem;
-      host = builtins.getEnv "HOSTNAME";
+      username = "anatorini";
+      system = "x86_64-linux";
+      host = "nixos";
+      # username = builtins.getEnv "HOST";
+      # system = builtins.currentSystem;
+      # host = builtins.getEnv "HOSTNAME";
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."anatorini" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
           ./configuration.nix
-          ./systems/${system}nix
+          ./systems/${system}.nix
           ./accounts/${username}.nix
           ./hosts/${host}.nix
         ];
