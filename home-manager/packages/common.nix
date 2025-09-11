@@ -32,7 +32,6 @@ with pkgs; [
       awscli2
       ffmpeg
       jq
-      valgrind
       cloc
       psutils
       file
