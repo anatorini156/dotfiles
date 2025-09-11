@@ -2,6 +2,8 @@
   pkgs,
   python_pkgs,
   username,
+  system,
+  host,
   ...
 }:
 let
@@ -16,6 +18,11 @@ in
   nixpkgs.config.allowUnfree = true;
 
   home.username = username;
+  home.file."debug".text = "
+  ${builtins.getEnv "HOST"}
+  ${builtins.getEnv "HOSTNAME"}
+  ${builtins.currentSystem }
+  ";
 
   programs.home-manager.enable = true;
 

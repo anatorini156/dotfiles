@@ -47,6 +47,7 @@
           zen = zen-browser;
           username = username;
           system = system;
+          host = host;
         };
       };
     };
