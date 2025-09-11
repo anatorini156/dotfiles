@@ -38,7 +38,7 @@
               modules = [
                 ./configuration.nix
                 ./systems/${system}.nix
-                ./accounts/${builtins.head (pkgs.lib.strings.splitString "@" username)}.nix
+                ./accounts/${username}.nix
                 ./hosts/${host}.nix
               ];
               extraSpecialArgs = {
@@ -50,7 +50,7 @@
             };
         in
         {
-          "anatorini" = mkHomeConfig "anatorini@nixos" { };
+          "anatorini" = mkHomeConfig "anatorini" { };
           "mxszym" = mkHomeConfig "mxszym@WRO-MXSZYM-MB03" { };
         };
     };
