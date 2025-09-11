@@ -24,31 +24,34 @@
       ...
     }:
     let
-      username = "anatorini";
-      system = "x86_64-linux";
-      host = "nixos";
-      # username = builtins.getEnv "HOST";
-      # system = builtins.currentSystem;
-      # host = builtins.getEnv "HOSTNAME";
+      system = builtins.currentSystem;
       pkgs = nixpkgs.legacyPackages.${system};
+      host = pkgs.lib.strings.trim (builtins.readFile "/etc/hostname");
     in
     {
-      homeConfigurations."anatorini" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          ./configuration.nix
-          ./systems/${system}.nix
-          ./accounts/${username}.nix
-          ./hosts/${host}.nix
-        ];
-        extraSpecialArgs = {
-          python_pkgs = nixpkgs-python;
-          zen = zen-browser;
-          username = username;
-          system = system;
-          host = host;
+      homeConfigurations =
+        let
+          mkHomeConfig =
+            username: extraArgs:
+            home-manager.lib.homeManagerConfiguration {
+              inherit pkgs;
+              modules = [
+                ./configuration.nix
+                ./systems/${system}.nix
+                ./accounts/${username}.nix
+                ./hosts/${host}.nix
+              ];
+              extraSpecialArgs = {
+                python_pkgs = nixpkgs-python;
+                zen = zen-browser;
+                inherit username system host;
+              }
+              // extraArgs;
+            };
+        in
+        {
+          "anatorini" = mkHomeConfig "anatorini@nixos" { };
+          "mxszym" = mkHomeConfig "mxszym@WRO-MXSZYM-MB03" { };
         };
-      };
     };
 }
