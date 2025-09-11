@@ -10,18 +10,18 @@ local servers = {
 	"html",
 	"yamlls",
 	"kotlin_language_server",
-	"java_language_server",
 	"bashls",
   "cmake",
+  "jdtls",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({})
 end
 
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "java" },
 	sync_install = false,
-  modules = {},
+	modules = {},
 	auto_install = true,
 	ignore_install = {},
 	highlight = {
@@ -45,6 +45,7 @@ lspconfig.zls.setup({
 		navic.attach(client, bufnr)
 	end,
 })
+
 
 lspconfig.nil_ls.setup({
 	--    settings = {
