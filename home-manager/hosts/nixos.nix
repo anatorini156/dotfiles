@@ -1,0 +1,24 @@
+{
+  username,
+  pkgs,
+  zen,
+  ...
+}:
+{
+  home.homeDirectory = "/home/${username}";
+  home.packages = with pkgs; [
+    spotify
+    discord
+    gimp3
+    flameshot
+    zen.packages.${pkgs.system}.default
+    tidal-hifi
+    jetbrains.idea-community-bin
+
+    gcc
+    chafa
+    alsa-utils
+    xclip
+    zen.packages.${pkgs.system}.default
+  ];
+}

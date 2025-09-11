@@ -24,21 +24,26 @@
       ...
     }:
     let
-      settings = import ./host.nix;
-      pkgs = nixpkgs.legacyPackages.${settings.system};
+      username = builtins.getEnv "HOST";
+      system = builtins.currentSystem;
+      host = builtins.getEnv "HOSTNAME";
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."${settings.username}" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
           ./configuration.nix
-          ./accounts/${settings.username}.nix
+          ./systems/${system}nix
+          ./accounts/${username}.nix
+          ./hosts/${host}.nix
         ];
         extraSpecialArgs = {
           python_pkgs = nixpkgs-python;
-          settings = settings;
           zen = zen-browser;
+          username = username;
+          system = system;
         };
       };
     };
