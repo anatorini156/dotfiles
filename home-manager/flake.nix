@@ -24,33 +24,46 @@
       ...
     }:
     let
-      system = builtins.currentSystem;
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = nixpkgs;
     in
     {
-      homeConfigurations =
-        let
-          mkHomeConfig =
-            username: hostName: extraArgs:
-            home-manager.lib.homeManagerConfiguration {
-              inherit pkgs;
-              modules = [
-                ./configuration.nix
-                ./systems/${system}.nix
-                ./accounts/${username}.nix
-                ./hosts/${hostName}.nix
-              ];
-              extraSpecialArgs = {
-                python_pkgs = nixpkgs-python;
-                zen = zen-browser;
-                inherit username system;
-              }
-              // extraArgs;
+      homeConfigurations = {
+        "anatorini" =
+          let
+            username = "anatorini";
+          in
+          home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+            modules = [
+              ./configuration.nix
+              ./systems/x86_64-linux.nix
+              ./accounts/${username}.nix
+              ./hosts/nixos.nix
+            ];
+            extraSpecialArgs = {
+              python_pkgs = nixpkgs-python;
+              zen = zen-browser;
+              inherit username;
             };
-        in
-        {
-          "anatorini" = mkHomeConfig "anatorini" "nixos" { };
-          "mxszym" = mkHomeConfig "mxszym" "WRO-MXSZYM-MB03" { };
-        };
+          };
+        "mxszym" =
+          let
+            username = "mxszym";
+          in
+          home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+            modules = [
+              ./configuration.nix
+              ./systems/aarch64-darwin.nix
+              ./accounts/${username}.nix
+              ./hosts/WRO-MXSZYM-MB03.nix
+            ];
+            extraSpecialArgs = {
+              python_pkgs = nixpkgs-python;
+              zen = zen-browser;
+              inherit username;
+            };
+          };
+      };
     };
 }
