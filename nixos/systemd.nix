@@ -1,11 +1,11 @@
 { pkgs, ... }:
 {
   systemd = {
-    services.user.ulauncher = {
+    user.services.ulauncher = {
       enable = true;
       description = "Ulauncher (user-level)";
       serviceConfig = {
-        ExecStart = "${pkgs.ulauncher}/bin/ulauncher";
+        ExecStart = "${pkgs.ulauncher}/bin/ulauncher --hide-window";
         Environment = "GDK_BACKEND=x11";
       };
       wantedBy = [ "graphical-session.target" ];
