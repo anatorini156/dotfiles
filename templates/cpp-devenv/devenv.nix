@@ -15,6 +15,7 @@
   env = {
     DEV_SHELL = "cpp";
   };
+  cachix.enable = false;
 
   scripts = {
     configure = {

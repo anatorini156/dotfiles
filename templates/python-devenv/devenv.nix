@@ -10,6 +10,7 @@
   env = {
     DEV_SHELL = "sandbox/python";
   };
+  cachix.enable = false;
 
   packages = [
     pkgs.pythonManylinuxPackages.manylinux2014Package
