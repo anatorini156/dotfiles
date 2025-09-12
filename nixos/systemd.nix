@@ -4,8 +4,11 @@
     user.services.ulauncher = {
       enable = true;
       description = "Ulauncher (user-level)";
-      serviceConfig.ExecStart = "${pkgs.ulauncher}/bin/ulauncher";
-      wantedBy = [ "default.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.ulauncher}/bin/ulauncher";
+        Environment = "GDK_BACKEND=x11";
+      };
+      wantedBy = [ "graphical-session.target" ];
     };
     services = {
       fprintd = {
