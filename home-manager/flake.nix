@@ -25,7 +25,7 @@
     }:
     {
       homeConfigurations = {
-        anatorini =
+        "anatorini@nixos" =
           let
             username = "anatorini";
             system = "x86_64-linux";
@@ -45,7 +45,7 @@
               inherit username;
             };
           };
-        mxszym =
+        "mxszym@WRO-MXSZYM-MB03" =
           let
             username = "mxszym";
             system = "aarch64-darwin";
