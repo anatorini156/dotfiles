@@ -23,9 +23,6 @@
       zen-browser,
       ...
     }:
-    let
-      pkgs = nixpkgs;
-    in
     {
       homeConfigurations = {
         "anatorini" =
@@ -33,7 +30,7 @@
             username = "anatorini";
           in
           home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
+            inherit nixpkgs;
             modules = [
               ./configuration.nix
               ./systems/x86_64-linux.nix
@@ -51,7 +48,7 @@
             username = "mxszym";
           in
           home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
+            inherit nixpkgs;
             modules = [
               ./configuration.nix
               ./systems/aarch64-darwin.nix
@@ -61,6 +58,7 @@
             extraSpecialArgs = {
               python_pkgs = nixpkgs-python;
               zen = zen-browser;
+              pkgs = nixpkgs;
               inherit username;
             };
           };
