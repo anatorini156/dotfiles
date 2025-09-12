@@ -25,15 +25,17 @@
     }:
     {
       homeConfigurations = {
-        "anatorini" =
+        anatorini =
           let
             username = "anatorini";
+            system = "x86_64-linux";
+            pkgs = import nixpkgs { inherit system; };
           in
           home-manager.lib.homeManagerConfiguration {
-            inherit nixpkgs;
+            inherit pkgs;
             modules = [
               ./configuration.nix
-              ./systems/x86_64-linux.nix
+              ./systems/${system}.nix
               ./accounts/${username}.nix
               ./hosts/nixos.nix
             ];
@@ -43,15 +45,17 @@
               inherit username;
             };
           };
-        "mxszym" =
+        mxszym =
           let
             username = "mxszym";
+            system = "aarch64-darwin";
+            pkgs = import nixpkgs { inherit system; };
           in
           home-manager.lib.homeManagerConfiguration {
-            inherit nixpkgs;
+            inherit pkgs;
             modules = [
               ./configuration.nix
-              ./systems/aarch64-darwin.nix
+              ./systems/${system}.nix
               ./accounts/${username}.nix
               ./hosts/WRO-MXSZYM-MB03.nix
             ];
