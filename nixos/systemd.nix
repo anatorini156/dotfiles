@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   systemd = {
-    user.services.ulauncher = {
+    services.user.ulauncher = {
       enable = true;
       description = "Ulauncher (user-level)";
       serviceConfig = {
