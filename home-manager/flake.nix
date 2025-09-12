@@ -24,8 +24,8 @@
       ...
     }:
     let
-      pkgs = nixpkgs;
       system = builtins.currentSystem;
+      pkgs = import nixpkgs { inherit system; };
     in
     {
       homeConfigurations =
