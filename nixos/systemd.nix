@@ -9,6 +9,11 @@
         Environment = "GDK_BACKEND=x11";
       };
       wantedBy = [ "graphical-session.target" ];
+      after = [
+        "graphical-session.target"
+        "xdg-desktop-database.service"
+      ];
+      requires = [ "xdg-desktop-database.service" ];
     };
     services = {
       fprintd = {
