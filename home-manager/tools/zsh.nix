@@ -100,7 +100,8 @@
 
             setup() {
               template=$(ls ~/.config/templates | fzf)
-              cp -i -r "$HOME/.config/templates/$template/"{.,}* .
+              cp -i -r $HOME/.config/templates/$template/.* .
+              cp -i -r $HOME/.config/templates/$template/* .
               git init
             }
 
