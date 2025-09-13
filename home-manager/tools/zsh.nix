@@ -103,6 +103,8 @@
               cp -i -r $HOME/.config/templates/$template/.* .
               cp -i -r $HOME/.config/templates/$template/* .
               git init
+              git add .
+              git commit -m "Init"
             }
 
             export EDITOR="nvim"
