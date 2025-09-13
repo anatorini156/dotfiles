@@ -4,16 +4,18 @@
     user.services.ulauncher = {
       enable = true;
       description = "Ulauncher (user-level)";
+
       serviceConfig = {
         ExecStart = "${pkgs.ulauncher}/bin/ulauncher --hide-window";
         Environment = "GDK_BACKEND=x11";
       };
+
+      # Make sure it only runs once we have a graphical session + D-Bus
       wantedBy = [ "graphical-session.target" ];
       after = [
         "graphical-session.target"
-        "xdg-desktop-database.service"
+        "dbus.service"
       ];
-      requires = [ "xdg-desktop-database.service" ];
     };
     services = {
       fprintd = {
