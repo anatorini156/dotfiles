@@ -15,7 +15,12 @@
         showStash = true;
       };
 
+      init = {
+          defaultBranch = "main";
+          };
+
       branch = {
+          
       };
       pull = {
         rebase = true;
