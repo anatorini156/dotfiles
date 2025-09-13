@@ -35,4 +35,5 @@ with pkgs; [
       valgrind
       cloc
       psutils
+      file
 ]
