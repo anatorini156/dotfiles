@@ -17,7 +17,9 @@
     firefox
     wireguard-tools
     nextcloud-client
+    (pkgs.callPackage /home/anatorini/Dev/claude-desktop-nix {})
     ulauncher
+    bitwarden-desktop
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
