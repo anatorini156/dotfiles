@@ -17,6 +17,9 @@
     nixpkgs-python = {
       url = "github:cachix/nixpkgs-python";
     };
+    claude-desktop = {
+        url = "github:anatorini156/claude-desktop-nix";
+    };
   };
 
   outputs =
@@ -25,6 +28,7 @@
       nixpkgs-python,
       home-manager,
       zen-browser,
+      claude-desktop,
       ...
     }:
     {
@@ -46,6 +50,7 @@
             ];
             extraSpecialArgs = {
               python_pkgs = nixpkgs-python;
+              claude = claude-desktop;
               zen = zen-browser;
               inherit username host system;
             };
