@@ -6,14 +6,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1757853381,
-        "narHash": "sha256-/tyzXcvZKMfFXDoGwxzu7CgWiAwB+gOO8ExQx72x/ug=",
-        "path": "/home/anatorini/Dev/claude-desktop-nix",
-        "type": "path"
+        "lastModified": 1757854231,
+        "narHash": "sha256-+9BecpFL30VbjtHjyZHc+E4KcKdnFxItLnUwpAnAII8=",
+        "owner": "anatorini156",
+        "repo": "claude-desktop-nix",
+        "rev": "a3bf4bd696c03387c8a7a0b2220b93c5c38482bb",
+        "type": "github"
       },
       "original": {
-        "path": "/home/anatorini/Dev/claude-desktop-nix",
-        "type": "path"
+        "owner": "anatorini156",
+        "repo": "claude-desktop-nix",
+        "type": "github"
       }
     },
     "flake-compat": {

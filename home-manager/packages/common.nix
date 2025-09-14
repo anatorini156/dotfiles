@@ -35,4 +35,6 @@ with pkgs; [
       cloc
       psutils
       file
+      p7zip
+
 ]
