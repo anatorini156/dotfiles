@@ -36,5 +36,6 @@ with pkgs; [
       psutils
       file
       p7zip
+      feh
 
 ]
