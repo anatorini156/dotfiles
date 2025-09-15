@@ -68,7 +68,6 @@
             extraSpecialArgs = {
               python_pkgs = nixpkgs-python;
               zen = zen-browser;
-              pkgs = nixpkgs;
               inherit username host system;
             };
           };
