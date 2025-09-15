@@ -50,7 +50,7 @@
               inherit username host system;
             };
           };
-        "mxszym" =
+        "mxszym@WRO-MSZYM-MB-03" =
           let
             username = "mxszym";
             system = "aarch64-darwin";
