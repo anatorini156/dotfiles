@@ -18,13 +18,18 @@ return {
 
 	config = function()
 		require("telescope").setup({
+			pickers = {
+				colorscheme = {
+					enable_preview = true,
+				},
+			},
 			defaults = {
-        layout_strategy = "vertical",
+				layout_strategy = "vertical",
 				layout_config = {
-					vertical = { 
-            width = 0.8,
-            height = 0.8,
-          },
+					vertical = {
+						width = 0.8,
+						height = 0.8,
+					},
 				},
 			},
 		})

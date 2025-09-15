@@ -9,7 +9,7 @@ return {
     name = "monokai-pro",
     priority = 2048,
     config = function()
-      vim.cmd("colorscheme rose-pine-moon")
+      vim.cmd("colorscheme rose-pine-main")
     end,
   },
 	{
