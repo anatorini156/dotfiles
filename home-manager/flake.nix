@@ -50,11 +50,11 @@
               inherit username host system;
             };
           };
-        "mxszym@WRO-MXSZYM-MB03" =
+        "mxszym@WRO-MXSZYM-MB-03" =
           let
             username = "mxszym";
             system = "aarch64-darwin";
-            host = "WRO-MXSZYM-MB03";
+            host = "WRO-MXSZYM-MB-03";
             pkgs = import nixpkgs { inherit system; };
           in
           home-manager.lib.homeManagerConfiguration {
