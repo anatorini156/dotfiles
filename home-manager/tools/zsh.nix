@@ -51,7 +51,6 @@
                 pushd ~/.config/home-manager/
                 git add .
                 home-manager switch
-                git restore --staged host.nix
                 popd
             }
 
@@ -67,9 +66,7 @@
                 pushd ~/.config/home-manager/
                 $EDITOR .
                 git add .
-                git restore --staged host.nix
                 git commit -m "Home-manager $(LC_TIME=en_US.UTF-8 date)"
-                git add host.nix
                 popd
             }
 
