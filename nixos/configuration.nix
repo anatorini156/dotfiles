@@ -59,6 +59,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    openrgb-with-all-plugins
     (python312.withPackages (
       ps: with ps; [
         psutil
@@ -78,5 +79,6 @@
     enable = true;
     setSocketVariable = true;
   };
+  services.hardware.openrgb.enable = true;
 
 }
