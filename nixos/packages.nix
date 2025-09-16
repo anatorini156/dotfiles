@@ -10,6 +10,7 @@
     gnomeExtensions.gtile
     gnomeExtensions.blur-my-shell
     gnomeExtensions.hibernate-status-button
+    gnomeExtensions.gtile
     gnome-tweaks
     open-vm-tools
     gjs
