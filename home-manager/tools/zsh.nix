@@ -21,7 +21,7 @@
       icat = "kitten icat";
       fa = "fd -IH";
       rp = "rg --passthrough";
-      gf = "git switch $(git branch | fzf)";
+      gb = "git switch $(git branch | fzf)";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
