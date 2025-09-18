@@ -6,7 +6,7 @@
     m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
   _battery: 4100
   _modelId: B03500000000
-  _sensitive: {change-host: false, divert-keys: true, hires-scroll-mode: false, reprogrammable-keys: true, scroll-ratchet: false, smart-shift: false, thumb-scroll-invert: false,
+  _sensitive: {change-host: true, divert-keys: true, hires-scroll-mode: false, reprogrammable-keys: true, scroll-ratchet: false, smart-shift: false, thumb-scroll-invert: false,
     thumb-scroll-mode: true}
   _unitId: D9582074
   change-host: null
