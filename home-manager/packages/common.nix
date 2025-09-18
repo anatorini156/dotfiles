@@ -16,7 +16,7 @@ with pkgs; [
       obsidian
       tldr
       kitty
-      felix-fm
+      #felix-fm
       fastfetch
       devenv
       btop
@@ -37,5 +37,6 @@ with pkgs; [
       file
       p7zip
       feh
+      fx
 
 ]
