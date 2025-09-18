@@ -38,5 +38,5 @@ with pkgs; [
       p7zip
       feh
       fx
-
+      jqp
 ]
