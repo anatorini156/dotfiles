@@ -10,7 +10,8 @@
     keybindings = {
       "alt+t" = "new_tab";
       "alt+w" = "close_tab";
-      "alt+T" = "new_window";
+      "alt+shift+t" = "new_os_window";
+      "alt+f" = "toggle_fullscreen";
       "alt+W" = "close_window";
       "alt+}" = "next_tab";
       "alt+{" = "previous_tab";
