@@ -43,8 +43,8 @@
       # active_tab_background = "#26233a";
       # inactive_tab_foreground = "#6e6a86";
       # inactive_tab_background = "#191724";
-      active_border_color = "#ff0000";
-      inactive_border_color = "#403d52";
+      # active_border_color = "#ff0000";
+      # inactive_border_color = "#403d52";
 
     };
   };
