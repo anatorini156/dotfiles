@@ -108,7 +108,6 @@
             }
 
             export EDITOR="nvim"
-            source <(command fx --init)
             # eval "$(/opt/homebrew/bin/brew shellenv)"
 
     '';
