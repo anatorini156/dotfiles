@@ -6,7 +6,7 @@
     logitech-udev-rules
     solaar
     gnomeExtensions.dash-to-dock
-    gnome-shell-extension-hide-top-bar
+    gnomeExtensions.hide-top-bar
     gnomeExtensions.gtile
     gnomeExtensions.blur-my-shell
     gnomeExtensions.hibernate-status-button
