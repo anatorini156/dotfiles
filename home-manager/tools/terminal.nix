@@ -29,7 +29,7 @@
       tab_title_template = "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{tab.last_focused_progress_percent}{tab.active_oldest_exe}";
       tab_bar_edge = "bottom";
       tab_bar_align = "left";
-      hide_window_decorations = "yes";
+      hide_window_decorations = "no";
 
       # incative_tab_forground = "#222222";
       # foreground = "#e0def4";
