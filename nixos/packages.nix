@@ -6,6 +6,7 @@
     logitech-udev-rules
     solaar
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.gtile
     gnomeExtensions.blur-my-shell
     gnomeExtensions.hibernate-status-button
     gnome-tweaks
