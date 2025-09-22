@@ -67,7 +67,7 @@ return {
 					{ "mode", separator = { left = "", right = "" }, right_padding = 2 },
 				},
 				lualine_b = {
-					{ "branch", separator = { left = "", right = "" } },
+					{ "branch", separator = { left = "", right = "" } },
 					{ "diff", separator = { left = "", right = "" } },
 				},
 				lualine_c = {
