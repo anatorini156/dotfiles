@@ -56,18 +56,46 @@ return {
 				},
 			},
 			inactive_winbar = {
+				lualine_c = { {
+					function()
+						return " "
+					end,
+				} },
+			},
+			sections = {
+				lualine_a = {
+					{ "mode", separator = { left = "", right = "" }, right_padding = 2 },
+				},
+				lualine_b = {
+					{ "branch", separator = { left = "", right = "" } },
+					{ "diff", separator = { left = "", right = "" } },
+				},
 				lualine_c = {
 					{
 						function()
-							return " "
+							local filepath = vim.fn.expand("%:p")
+							if filepath == "" then
+								return "[No Name]"
+							end
+
+							-- Try to detect project root
+							local cwd = vim.fn.getcwd()
+							local git_root = vim.fn.systemlist("git -C " .. cwd .. " rev-parse --show-toplevel")[1]
+
+							local root = git_root or cwd
+							if root == "" then
+								root = cwd
+							end
+
+							-- Return relative path
+							return vim.fn.fnamemodify(filepath, ":." .. root)
 						end,
+						separator = { left = "", right = "" },
+						left_padding = 2,
+						right_padding = 2,
 					},
 				},
-			},
-			sections = {
-				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-				lualine_b = { "filename", { "branch", separator = { left = "|" } } },
-				lualine_c = {},
+
 				lualine_x = {
 					function()
 						local rec_reg = vim.fn.reg_recording()
@@ -77,10 +105,29 @@ return {
 							return "recording @" .. rec_reg
 						end
 					end,
+					{
+						separator = { left = "", right = "" },
+						left_padding = 2,
+					},
 				},
-				lualine_y = { "filetype", "progress" },
+				lualine_y = {
+					{ "selectioncount", separator = { left = "", right = "" }, left_padding = 2 },
+					{
+						"filetype",
+						separator = { left = "" },
+						left_padding = 2,
+					},
+					{
+						"diagnostics",
+					},
+					{
+						"progress",
+						separator = { right = "" },
+						left_padding = 2,
+					},
+				},
 				lualine_z = {
-					{ "location", separator = { right = "" }, left_padding = 2 },
+					{ "location", separator = { left = "", right = "" }, left_padding = 2 },
 				},
 			},
 			inactive_sections = {
