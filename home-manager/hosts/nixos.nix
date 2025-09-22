@@ -13,6 +13,7 @@
     zen.packages.${pkgs.system}.default
     tidal-hifi
     jetbrains.idea-community-bin
+    jetbrains.clion
 
     gcc
     chafa
