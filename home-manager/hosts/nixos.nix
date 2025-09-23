@@ -20,6 +20,6 @@
     alsa-utils
     xclip
     zen.packages.${pkgs.system}.default
-    reapaer
+    reaper
   ];
 }
