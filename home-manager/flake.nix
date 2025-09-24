@@ -42,8 +42,14 @@
             username = "anatorini";
             system = "x86_64-linux";
             host = "nixos";
-            pkgs = import nixpkgs { inherit system; };
-            pkgs-unstable = import nixpkgs-unstable {inherit system; };
+            pkgs = import nixpkgs { 
+                inherit system;
+                overlays = [
+    (final: prev: {
+      unstable = import nixpkgs-unstable { inherit system; };
+    })
+  ];
+                };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
@@ -55,7 +61,6 @@
             ];
             extraSpecialArgs = {
               python_pkgs = nixpkgs-python;
-              pkgs-unstable = pkgs-unstable;
               claude = claude-desktop;
               zen = zen-browser;
               inherit username host system;
@@ -66,8 +71,13 @@
             username = "mxszym";
             system = "aarch64-darwin";
             host = "WRO-MXSZYM-MB-03";
-            pkgs = import nixpkgs { inherit system; };
-            pkgs-unstable = import nixpkgs-unstable {inherit system; };
+            pkgs = import nixpkgs { inherit system;
+overlays = [
+    (final: prev: {
+      unstable = import nixpkgs-unstable { inherit system; };
+    })
+  ];
+            };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
@@ -79,7 +89,6 @@
             ];
             extraSpecialArgs = {
               python_pkgs = nixpkgs-python;
-              pkgs-unstable = pkgs-unstable;
               zen = zen-browser;
               inherit username host system;
             };
