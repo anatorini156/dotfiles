@@ -23,5 +23,6 @@
     zen.packages.${pkgs.system}.default
     reaper
     coolercontrol.coolercontrold
+    coolercontrol.coolercontrol-gui
   ];
 }
