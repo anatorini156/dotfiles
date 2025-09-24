@@ -43,9 +43,11 @@
             system = "x86_64-linux";
             host = "nixos";
             pkgs = import nixpkgs { inherit system; };
+            pkgs-unstable = import nixpkgs-unstable {inherit system; };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
+            inherit pkgs-unstable;
             modules = [
               ./configuration.nix
               ./systems/${system}.nix
