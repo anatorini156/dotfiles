@@ -4,6 +4,9 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-25.05";
+    };
+    nixpkgs-unstable = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
     home-manager = {
@@ -25,6 +28,7 @@
   outputs =
     {
       nixpkgs,
+      nixpkgs-unstable,
       nixpkgs-python,
       home-manager,
       zen-browser,
@@ -61,9 +65,11 @@
             system = "aarch64-darwin";
             host = "WRO-MXSZYM-MB-03";
             pkgs = import nixpkgs { inherit system; };
+            pkgs-unstable = import nixpkgs-unstable {inherit system; };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
+            inherit pkgs-unstable;
             modules = [
               ./configuration.nix
               ./systems/${system}.nix
