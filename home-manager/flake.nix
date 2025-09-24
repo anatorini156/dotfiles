@@ -47,7 +47,6 @@
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
-            inherit pkgs-unstable;
             modules = [
               ./configuration.nix
               ./systems/${system}.nix
@@ -56,6 +55,7 @@
             ];
             extraSpecialArgs = {
               python_pkgs = nixpkgs-python;
+              pkgs-unstable = pkgs-unstable;
               claude = claude-desktop;
               zen = zen-browser;
               inherit username host system;
@@ -71,7 +71,6 @@
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
-            inherit pkgs-unstable;
             modules = [
               ./configuration.nix
               ./systems/${system}.nix
@@ -80,6 +79,7 @@
             ];
             extraSpecialArgs = {
               python_pkgs = nixpkgs-python;
+              pkgs-unstable = pkgs-unstable;
               zen = zen-browser;
               inherit username host system;
             };
