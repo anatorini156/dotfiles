@@ -45,10 +45,10 @@
             pkgs = import nixpkgs { 
                 inherit system;
                 overlays = [
-    (final: prev: {
-      unstable = import nixpkgs-unstable { inherit system; };
-    })
-  ];
+                    (final: prev: {
+                      unstable = import nixpkgs-unstable { inherit system; };
+                    })
+                  ];
                 };
           in
           home-manager.lib.homeManagerConfiguration {

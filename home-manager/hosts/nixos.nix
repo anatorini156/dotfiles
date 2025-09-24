@@ -1,7 +1,6 @@
 {
   username,
   pkgs,
-  pkgs-unstable,
   zen,
   ...
 }:
@@ -13,7 +12,7 @@
     flameshot
     zen.packages.${pkgs.system}.default
     tidal-hifi
-    pkgs-unstable.idea-community-bin
+    unstable.idea-community-bin
     jetbrains.clion
 
     gcc
