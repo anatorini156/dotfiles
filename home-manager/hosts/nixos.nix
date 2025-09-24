@@ -12,7 +12,7 @@
     flameshot
     zen.packages.${pkgs.system}.default
     tidal-hifi
-    unstable.idea-community-bin
+    unstable.hello
     jetbrains.clion
 
     gcc
