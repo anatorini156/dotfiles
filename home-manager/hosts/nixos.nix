@@ -13,7 +13,7 @@
     flameshot
     zen.packages.${pkgs.system}.default
     tidal-hifi
-    jetbrains.idea-community-bin
+    pkgs-unstable.idea-community-bin
     jetbrains.clion
 
     gcc
