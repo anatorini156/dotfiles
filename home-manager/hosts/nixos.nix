@@ -22,5 +22,6 @@
     xclip
     zen.packages.${pkgs.system}.default
     reaper
+    coolercontrol.coolercontrold
   ];
 }
