@@ -1,0 +1,64 @@
+<application>
+  <component name="ActionHistoryManager">
+    <ids>
+      <option value="ChangeColorScheme" />
+    </ids>
+  </component>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="LangManager">
+    <option name="languageName" value="JAVA" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="Inter" />
+    <option name="fontSize" value="13.0" />
+    <option name="ideScale" value="1.25" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "KEYMAP": "zoom\nscale\nfont size\nGotoFile\ngo to file",
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "6",
+    "MarketplacePluginsSearchHistory": "ktor\nrose pine\nrose",
+    "NewProjectWizard.generateOnboardingTips": "true",
+    "NextRunPlatformUpdateBuild": "IC-252.26199.169",
+    "NextRunPlatformUpdateSelfBuild": "IC-252.25557.131",
+    "NextRunPlatformUpdateVersion": "2025.2.2",
+    "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.deprecation.notification": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "SettingsSearchHistory": "font",
+    "com.intellij.ide.projectWizard.generators.JavaNewProjectWizard$Step.selectedStep": "IntelliJ",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "252.25557.131",
+    "fileTypeChangedCounter": "2",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "got.it.tooltip.Plugins Auto-Update": "1",
+    "got.it.tooltip.settings.sync.in.settings": "1",
+    "ide.updates.old.dirs.scan.scheduled": "1759343273352",
+    "idea.islands.enabled": "true",
+    "input.method.disabler.muted": "true",
+    "installed.kotlin.plugin.version": "252.25557.131-IJ",
+    "jdk.selected.JAVA_MODULE": "openjdk-24 (2)",
+    "last_opened_file_path": "/home/anatorini/Documents/intellij-settings.zip",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "onboarding.generation.number": "1",
+    "previousColorScheme": "_@user_rose-pine",
+    "project.wizard.group": "NPW.simple-project.Java",
+    "registry.to.advanced.settings.migration.build": "IC-252.25557.131",
+    "terminal.gen.one.option.visible": "false"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/anatorini/Documents/intellij-settings.zip"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.profiler.ultimate.hprof.impl.HprofFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>

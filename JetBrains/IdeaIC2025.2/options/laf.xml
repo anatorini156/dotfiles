@@ -1,0 +1,8 @@
+<application>
+  <component name="LafManager">
+    <laf themeId="8c92a344-c5fe-48e9-b654-0794cf14a36f" />
+    <lafs-to-previous-schemes>
+      <laf-to-scheme laf="ae0e6cf0-1843-41df-888d-6114e94b3a6c" scheme="_@user_rose-pine" />
+    </lafs-to-previous-schemes>
+  </component>
+</application>

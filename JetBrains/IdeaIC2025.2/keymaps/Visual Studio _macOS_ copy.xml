@@ -1,0 +1,57 @@
+<keymap version="1" name="Visual Studio (macOS) copy" parent="Visual Studio OSX">
+  <action id="ActivateProjectToolWindow">
+    <keyboard-shortcut first-keystroke="meta alt l" />
+    <keyboard-shortcut first-keystroke="meta 1" />
+    <keyboard-shortcut first-keystroke="shift meta i" />
+  </action>
+  <action id="Adtui.ZoomToFitAction">
+    <keyboard-shortcut first-keystroke="meta divide" />
+  </action>
+  <action id="Android.SyncProject" />
+  <action id="CloseEditor">
+    <keyboard-shortcut first-keystroke="meta w" />
+  </action>
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="meta alt slash" />
+    <keyboard-shortcut first-keystroke="meta alt divide" />
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="c" />
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta c" />
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta slash" />
+    <keyboard-shortcut first-keystroke="meta k" second-keystroke="meta u" />
+    <keyboard-shortcut first-keystroke="meta slash" />
+  </action>
+  <action id="ExternalSystem.ProjectRefreshAction" />
+  <action id="FileChooser.GoToRoot" />
+  <action id="FileChooser.TogglePathBar" />
+  <action id="FileStructurePopup">
+    <keyboard-shortcut first-keystroke="alt back_slash" />
+    <keyboard-shortcut first-keystroke="shift meta o" />
+  </action>
+  <action id="GotoAction">
+    <keyboard-shortcut first-keystroke="shift meta p" />
+  </action>
+  <action id="GotoFile">
+    <keyboard-shortcut first-keystroke="meta p" />
+  </action>
+  <action id="GotoSymbol">
+    <keyboard-shortcut first-keystroke="shift meta t" />
+  </action>
+  <action id="Images.Editor.ActualSize">
+    <keyboard-shortcut first-keystroke="meta divide" />
+  </action>
+  <action id="ParameterInfo" />
+  <action id="Pause">
+    <keyboard-shortcut first-keystroke="meta pause" />
+  </action>
+  <action id="ResourceExplorer.show" />
+  <action id="android.deploy.ApplyChanges">
+    <keyboard-shortcut first-keystroke="ctrl meta e" />
+  </action>
+  <action id="android.deploy.CodeSwap">
+    <keyboard-shortcut first-keystroke="shift ctrl meta e" />
+  </action>
+  <action id="android.device.power.button" />
+  <action id="android.streaming.hardware.input">
+    <keyboard-shortcut first-keystroke="ctrl w" />
+  </action>
+</keymap>

@@ -1,0 +1,130 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$SelectAll">
+      <i c="7" l="1758739294762" />
+    </e>
+    <e n="ChangeColorScheme">
+      <i c="2" d="2" l="1758739349519" k="1758739349519" />
+    </e>
+    <e n="ChangeKeymap">
+      <i c="8" l="1758739218105" />
+    </e>
+    <e n="ChangeLaf">
+      <i c="1" l="1758739357854" />
+    </e>
+    <e n="CloseContent">
+      <i c="1" l="1758739207339" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="15" l="1758739294942" />
+    </e>
+    <e n="EditorDecreaseFontSize">
+      <i c="16" l="1758739319266" />
+    </e>
+    <e n="EditorEscape">
+      <i c="2" l="1758739458149" />
+    </e>
+    <e n="EditorIncreaseFontSize">
+      <i c="23" l="1758739319169" />
+    </e>
+    <e n="EditorScrollUp">
+      <i c="1" l="1758739457031" />
+    </e>
+    <e n="ExpandAllRegions">
+      <i c="1" l="1758738800787" />
+    </e>
+    <e n="ExpandRecursively">
+      <i c="1" l="1758739238884" />
+    </e>
+    <e n="ExpressionTypeInfo">
+      <i c="2" l="1758737487588" />
+    </e>
+    <e n="FileStructurePopup">
+      <i c="1" l="1758739183670" />
+    </e>
+    <e n="GotoAction">
+      <i c="5" l="1758739348976" />
+    </e>
+    <e n="GotoFile">
+      <i c="5" l="1758739199564" />
+    </e>
+    <e n="GotoSymbol">
+      <i c="1" l="1758739186021" />
+    </e>
+    <e n="ProjectViewExpandAll">
+      <i c="1" l="1758739237735" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="16" l="1758739466813" />
+    </e>
+    <e n="ShowSettings">
+      <i c="4" l="1758739364603" />
+    </e>
+    <e n="WelcomeScreen.Configure.Import">
+      <i c="1" l="1758737414974" />
+    </e>
+    <e n="WelcomeScreen.CreateNewProject">
+      <i c="1" l="1758737480850" />
+    </e>
+    <e n="WelcomeScreen.Plugins">
+      <i c="3" l="1758739468044" />
+    </e>
+    <e n="ZoomInIdeAction">
+      <i c="3" l="1758739314326" />
+    </e>
+    <e n="ZoomOutIdeAction">
+      <i c="1" l="1758739315507" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeColorSchemeAction$1">
+      <i c="2" l="1758739351125" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeKeymapAction$1">
+      <i c="4" l="1758739219845" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeKeymapAction$2">
+      <i c="2" l="1758738651733" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$LafChangeAction">
+      <i c="1" l="1758739359698" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.AnActionWrapper">
+      <i c="16" l="1758739457023" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="2" l="1758738798224" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddKeyboardShortcutAction">
+      <i c="10" l="1758739140860" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddMouseShortcutAction">
+      <i c="2" l="1758739232633" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$FindByShortcutAction">
+      <i c="1" l="1758738509808" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="11" l="1758739349516" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$5">
+      <i c="2" l="1758739347188" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="1" l="1758739463769" />
+    </e>
+    <e n="com.intellij.ui.tabs.impl.JBTabsImpl$SelectNextAction">
+      <i c="6" l="1758739202018" />
+    </e>
+    <e n="com.intellij.ui.tabs.impl.JBTabsImpl$SelectPreviousAction">
+      <i c="5" l="1758739202106" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$notifyAboutShortcutConflict$1">
+      <i c="1" l="1758739206464" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$notifyAboutShortcutConflict$2">
+      <i c="1" l="1758738826527" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ShortcutConflictsSettings">
+      <i c="1" l="1758739152203" />
+    </e>
+  </component>
+</application>

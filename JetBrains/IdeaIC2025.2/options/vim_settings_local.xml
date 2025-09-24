@@ -1,0 +1,47 @@
+<application>
+  <component name="VimJumpsSettings">
+    <project id="untitled-bd5bc274">
+      <jump line="3" column="5" filename="$USER_HOME$/IdeaProjects/untitled/src/Main.java" protocol="file" />
+      <jump line="9" column="0" filename="$USER_HOME$/IdeaProjects/untitled/src/Main.java" protocol="file" />
+      <jump line="12" column="0" filename="$USER_HOME$/IdeaProjects/untitled/src/Main.java" protocol="file" />
+      <jump line="13" column="1" filename="$USER_HOME$/IdeaProjects/untitled/src/Main.java" protocol="file" />
+      <jump line="8" column="36" filename="$USER_HOME$/IdeaProjects/untitled/src/Main.java" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/IdeaProjects/untitled/.gitignore" protocol="file" />
+      <jump line="15" column="19" filename="$USER_HOME$/IdeaProjects/untitled/.gitignore" protocol="file" />
+      <jump line="18" column="18" filename="$USER_HOME$/IdeaProjects/untitled/.gitignore" protocol="file" />
+      <jump line="10" column="8" filename="$USER_HOME$/IdeaProjects/untitled/.gitignore" protocol="file" />
+      <jump line="12" column="10" filename="$USER_HOME$/IdeaProjects/untitled/.gitignore" protocol="file" />
+      <jump line="8" column="0" filename="$USER_HOME$/IdeaProjects/untitled/.gitignore" protocol="file" />
+      <jump line="26" column="0" filename="$USER_HOME$/IdeaProjects/untitled/.gitignore" protocol="file" />
+    </project>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <localmarks>
+      <file name="$USER_HOME$/IdeaProjects/untitled/src/Main.java" timestamp="1758739207345">
+        <mark key="&quot;" line="8" column="36" />
+        <mark key="[" line="8" column="37" />
+        <mark key="]" line="8" column="37" />
+        <mark key="." line="8" column="36" />
+        <mark key="^" line="8" column="37" />
+      </file>
+    </localmarks>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="." type="CHARACTER_WISE">
+        <text encoding="base64" />
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-offset encoding="base64" />
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+  <component name="VimVariables">
+    <vim-variables />
+  </component>
+</application>
