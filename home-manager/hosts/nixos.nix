@@ -12,7 +12,7 @@
     flameshot
     zen.packages.${pkgs.system}.default
     tidal-hifi
-    jetbrains.idea-community-bin
+    jetbrains.idea-community-src
     jetbrains.clion
 
     gcc
