@@ -24,5 +24,6 @@
     coolercontrol.coolercontrold
     coolercontrol.coolercontrol-gui
     libreoffice-still
+    postman
   ];
 }
