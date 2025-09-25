@@ -39,4 +39,5 @@ with pkgs; [
       feh
       fx
       jqp
+      unzip
 ]
