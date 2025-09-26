@@ -29,7 +29,7 @@ with pkgs;
   kotlin-language-server
   gradle
   kotlin
-  temurin-jre-bin
+  jdk
  
   jdt-language-server
   maven
