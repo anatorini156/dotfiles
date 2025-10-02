@@ -11,6 +11,7 @@
     ./packages.nix
     ./users.nix
     ./security.nix
+    ./virtualization.nix
   ];
 
   system.stateVersion = "25.05";
