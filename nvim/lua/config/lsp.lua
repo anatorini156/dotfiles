@@ -48,11 +48,11 @@ lspconfig.zls.setup({
 
 
 lspconfig.nil_ls.setup({
-	--    settings = {
-	--       ['nil'] = {
-	--          formatting = {
-	--             command = { "nixfmt" },
-	--          },
-	--       },
-	--    },
+	    settings = {
+	       ['nil'] = {
+	          formatting = {
+	             command = { "nixfmt" },
+	          },
+	       },
+	    },
 })
