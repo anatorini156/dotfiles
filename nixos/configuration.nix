@@ -75,11 +75,11 @@
   environment.etc."wireguard" = {
     source = "/home/anatorini/.wg";
   };
-  virtualisation.docker.enable = true;
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
+  # virtualisation.docker.enable = true;
+  # virtualisation.docker.rootless = {
+  #   enable = true;
+  #   setSocketVariable = true;
+  # };
   services.hardware.openrgb.enable = true;
 
 }
