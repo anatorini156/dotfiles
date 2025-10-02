@@ -11,6 +11,6 @@
         dragAndDrop = true;
       };
     };
-    users.extraGroups.vboxusers.members = [ "anatorini" ];
   };
+  users.extraGroups.vboxusers.members = [ "anatorini" ];
 }
