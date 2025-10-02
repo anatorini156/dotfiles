@@ -35,6 +35,17 @@
     power-profiles-daemon.enable = true;
     logind.lidSwitch = "suspend-then-hibernate";
     flatpak.enable = true;
+    openssh = {
+    enable = true;
+    ports = [22];
+        settings = {
+            PasswordAuthentication = true;
+            AllowUsers = null;
+            UseDns = true;
+            X11Forwarding = true;
+            PermitRootLogin = "no";
+        };
+    };
   };
 
 }
