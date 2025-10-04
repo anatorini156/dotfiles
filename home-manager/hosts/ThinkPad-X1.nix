@@ -14,7 +14,6 @@
     tidal-hifi
     unstable.jetbrains.idea-community-bin
     jetbrains.clion
-
     gcc
     chafa
     alsa-utils
@@ -25,5 +24,6 @@
     coolercontrol.coolercontrol-gui
     libreoffice-still
     postman
+    godot
   ];
 }
