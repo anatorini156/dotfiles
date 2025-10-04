@@ -21,7 +21,7 @@
       url = "github:cachix/nixpkgs-python";
     };
     claude-desktop = {
-        url = "github:anatorini156/claude-desktop-nix";
+      url = "github:anatorini156/claude-desktop-nix";
     };
   };
 
@@ -37,19 +37,48 @@
     }:
     {
       homeConfigurations = {
+        "anatorini@ThinkPad-X1" =
+          let
+            username = "anatorini";
+            system = "x86_64-linux";
+            host = "ThinkPad-X1";
+            pkgs = import nixpkgs {
+              inherit system;
+              overlays = [
+                (final: prev: {
+                  unstable = import nixpkgs-unstable { inherit system; };
+                })
+              ];
+            };
+          in
+          home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+            modules = [
+              ./configuration.nix
+              ./systems/${system}.nix
+              ./accounts/${username}.nix
+              ./hosts/${host}.nix
+            ];
+            extraSpecialArgs = {
+              python_pkgs = nixpkgs-python;
+              claude = claude-desktop;
+              zen = zen-browser;
+              inherit username host system;
+            };
+          };
         "anatorini@nixos" =
           let
             username = "anatorini";
             system = "x86_64-linux";
             host = "nixos";
-            pkgs = import nixpkgs { 
-                inherit system;
-                overlays = [
-                    (final: prev: {
-                      unstable = import nixpkgs-unstable { inherit system; };
-                    })
-                  ];
-                };
+            pkgs = import nixpkgs {
+              inherit system;
+              overlays = [
+                (final: prev: {
+                  unstable = import nixpkgs-unstable { inherit system; };
+                })
+              ];
+            };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
@@ -71,12 +100,13 @@
             username = "mxszym";
             system = "aarch64-darwin";
             host = "WRO-MXSZYM-MB-03";
-            pkgs = import nixpkgs { inherit system;
-overlays = [
-    (final: prev: {
-      unstable = import nixpkgs-unstable { inherit system; };
-    })
-  ];
+            pkgs = import nixpkgs {
+              inherit system;
+              overlays = [
+                (final: prev: {
+                  unstable = import nixpkgs-unstable { inherit system; };
+                })
+              ];
             };
           in
           home-manager.lib.homeManagerConfiguration {
