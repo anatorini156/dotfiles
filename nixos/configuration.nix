@@ -1,17 +1,16 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./hardware-configuration.nix
-    ./boot.nix
-    ./services.nix
-    ./networking.nix
-    ./hardware-tweaks.nix
-    ./programs.nix
-    ./systemd.nix
-    ./packages.nix
-    ./users.nix
-    ./security.nix
-    ./virtualization.nix
+    ./common/boot.nix
+    ./common/services.nix
+    ./common/networking.nix
+    ./common/hardware-tweaks.nix
+    ./common/programs.nix
+    ./common/systemd.nix
+    ./common/packages.nix
+    ./common/users.nix
+    ./common/security.nix
+    ./common/virtualization.nix
   ];
 
   system.stateVersion = "25.05";
