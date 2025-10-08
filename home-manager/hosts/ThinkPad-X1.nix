@@ -25,5 +25,6 @@
     libreoffice-still
     postman
     godot
+    blender
   ];
 }
