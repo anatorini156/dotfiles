@@ -26,5 +26,6 @@
     postman
     godot
     blender
+    teams
   ];
 }
