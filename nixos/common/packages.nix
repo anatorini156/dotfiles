@@ -11,6 +11,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.hibernate-status-button
     gnomeExtensions.gtile
+    gnomeExtensions.rounded-corners
     gnome-tweaks
     open-vm-tools
     gjs
