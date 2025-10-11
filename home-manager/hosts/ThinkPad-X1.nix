@@ -6,7 +6,6 @@
 }:
 {
   home.packages = with pkgs; [
-    spotify
     discord
     gimp3
     flameshot
