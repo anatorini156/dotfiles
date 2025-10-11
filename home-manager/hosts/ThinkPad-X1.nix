@@ -26,6 +26,7 @@
     godot
     blender
     kubectl
+    kind
 
   ];
 }
