@@ -28,5 +28,6 @@
     blender
     kubectl
     kind
+    act
   ];
 }
