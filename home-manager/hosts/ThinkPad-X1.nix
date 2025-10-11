@@ -27,6 +27,5 @@
     blender
     kubectl
     kind
-
   ];
 }
