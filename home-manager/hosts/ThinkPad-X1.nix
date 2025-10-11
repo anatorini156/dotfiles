@@ -25,6 +25,7 @@
     postman
     godot
     blender
+    kubectl
 
   ];
 }
