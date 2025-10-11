@@ -64,7 +64,6 @@
       ps: with ps; [
         psutil
       ]
-      tkinter
     ))
   ];
   environment.sessionVariables = {
