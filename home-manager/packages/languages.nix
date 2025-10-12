@@ -40,4 +40,7 @@ with pkgs;
 
   go
   android-tools
+
+  docker-language-server
+
 ]
