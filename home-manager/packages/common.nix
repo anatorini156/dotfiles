@@ -40,5 +40,5 @@ with pkgs; [
       fx
       jqp
       unzip
-      zellij
+      tmux
 ]
