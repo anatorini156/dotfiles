@@ -40,6 +40,5 @@
     pkgs.gnome-tour
     evince
     xterm
-    zellij
   ];
 }
