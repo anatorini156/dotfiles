@@ -7,7 +7,6 @@
 {
   home.packages = with pkgs; [
     discord
-    spotify
     gimp3
     flameshot
     zen.packages.${pkgs.system}.default
