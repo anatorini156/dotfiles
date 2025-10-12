@@ -30,6 +30,7 @@
       tab_bar_edge = "bottom";
       tab_bar_align = "left";
       hide_window_decorations = "yes";
+      enabled_layouts  = "tall:bias=50;full_size=1;mirrored=false";
 
       # incative_tab_forground = "#222222";
       # foreground = "#e0def4";
