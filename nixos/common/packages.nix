@@ -30,7 +30,6 @@
     totem
     yelp
     geary
-    gnome-calendar
     gnome-contacts
     gnome-console
     gnome-maps
