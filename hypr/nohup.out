@@ -1,6 +1,0 @@
-[2025-08-13 21:28:41.337] [info] Using configuration file /home/anatorini/.config/waybar/config.jsonc
-[2025-08-13 21:28:41.340] [info] Discovered appearance 'dark'
-[2025-08-13 21:28:41.340] [info] Using CSS file /home/anatorini/.config/waybar/style.css
-[2025-08-13 21:28:41.344] [info] Hyprland IPC starting
-[2025-08-13 21:28:41.345] [info] Loading persistent workspaces from Hyprland workspace rules
-[2025-08-13 21:28:41.508] [info] Bar configured (width: 1920, height: 40) for output: eDP-1
