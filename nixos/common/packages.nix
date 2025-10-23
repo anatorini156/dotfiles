@@ -26,6 +26,7 @@
     pythonManylinuxPackages.manylinux2014Package
     rofi
     waybar
+    hyprlandPlugins.hyprspace
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
