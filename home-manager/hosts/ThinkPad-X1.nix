@@ -29,4 +29,7 @@
     kind
     act
   ];
+  wayland.windowManager.hyprland.plugins = [
+    pkgs.hyprlandPlugins.hyprspace
+  ];
 }
