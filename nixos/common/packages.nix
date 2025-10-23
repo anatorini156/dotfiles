@@ -24,6 +24,8 @@
     ulauncher
     bitwarden-desktop
     pythonManylinuxPackages.manylinux2014Package
+    rofi
+    waybar
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
