@@ -11,8 +11,7 @@ local servers = {
 	"yamlls",
 	"kotlin_language_server",
 	"bashls",
-  "cmake",
-  "jdtls",
+	"cmake",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({})
@@ -46,13 +45,15 @@ lspconfig.zls.setup({
 	end,
 })
 
-
 lspconfig.nil_ls.setup({
-	    settings = {
-	       ['nil'] = {
-	          formatting = {
-	             command = { "nixfmt" },
-	          },
-	       },
-	    },
+	settings = {
+		["nil"] = {
+			formatting = {
+				command = { "nixfmt" },
+			},
+		},
+	},
 })
+
+vim.lsp.enable("docker_language_server")
+

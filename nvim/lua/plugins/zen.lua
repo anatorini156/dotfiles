@@ -126,8 +126,8 @@ return {
 			truezen.narrow(first, last)
 		end, { noremap = true })
 
-		keymap.set("n", "<leader>zf", truezen.focus, { noremap = true })
-		keymap.set("n", "<leader>zz", truezen.minimalist, { noremap = true })
-		keymap.set("n", "<leader>za", truezen.ataraxis, { noremap = true })
+		keymap.set("n", "<leader>zf", truezen.focus, { noremap = true,desc="Zen focus" })
+		keymap.set("n", "<leader>zz", truezen.minimalist, { noremap = true, desc = "Zen Minimal" })
+		keymap.set("n", "<leader>za", truezen.ataraxis, { noremap = true ,desc = "Zen ataraxis"})
 	end,
 }

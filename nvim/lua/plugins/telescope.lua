@@ -24,6 +24,8 @@ return {
 				},
 			},
 			defaults = {
+                hidden = true;
+                no_ignore = true;
 				layout_strategy = "vertical",
 				layout_config = {
 					vertical = {
@@ -39,7 +41,7 @@ return {
 	keys = {
 		{
 			"<leader> ",
-			"<cmd>Telescope find_files<CR>",
+			"<cmd>Telescope find_files <CR>",
 			"n",
 			desc = "Find file",
 			noremap = true,
