@@ -12,7 +12,7 @@
     fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
     xserver = {
       enable = true;
-      displayManager.gdm.enable = true;
+      displayManager.gdm.enable = false;
       desktopManager.gnome.enable = true;
       xkb = {
         layout = "pl";
