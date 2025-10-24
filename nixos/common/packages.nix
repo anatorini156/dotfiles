@@ -21,7 +21,6 @@
     firefox
     wireguard-tools
     nextcloud-client
-    ulauncher
     bitwarden-desktop
     pythonManylinuxPackages.manylinux2014Package
     rofi
