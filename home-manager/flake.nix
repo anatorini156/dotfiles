@@ -23,6 +23,18 @@
     claude-desktop = {
       url = "github:anatorini156/claude-desktop-nix";
     };
+    hyprland = {
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    Hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+
+      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs =
@@ -33,6 +45,7 @@
       home-manager,
       zen-browser,
       claude-desktop,
+      Hyprspace,
       ...
     }:
     {
@@ -63,6 +76,7 @@
               python_pkgs = nixpkgs-python;
               claude = claude-desktop;
               zen = zen-browser;
+              hyprspace = Hyprspace;
               inherit username host system;
             };
           };

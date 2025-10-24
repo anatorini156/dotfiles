@@ -2,6 +2,7 @@
   username,
   pkgs,
   zen,
+  hyprspace,
   ...
 }:
 {
@@ -13,21 +14,21 @@
     size = 16;
   };
   gtk = {
-  enable = true;
-  cursorTheme = {
-    name = "Bibata-Modern-Classic";
-    package = pkgs.bibata-cursors;
+    enable = true;
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+    };
+    # Note the different syntax for gtk3 and gtk4
+    gtk3.extraConfig = {
+      "gtk-cursor-theme-name" = "Bibata-Modern-Classic";
+    };
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-cursor-theme-name=Bibata-Modern-Classic
+      '';
+    };
   };
-# Note the different syntax for gtk3 and gtk4
-  gtk3.extraConfig = {
-    "gtk-cursor-theme-name" = "Bibata-Modern-Classic";
-  };
-  gtk4.extraConfig = {
-    Settings = ''
-    gtk-cursor-theme-name=Bibata-Modern-Classic
-    '';
-  };
-};
   home.packages = with pkgs; [
     discord
     gimp3
@@ -52,8 +53,9 @@
     kind
     act
     dracula-theme
+    hyprlock
   ];
   wayland.windowManager.hyprland.plugins = [
-    pkgs.hyprlandPlugins.hyprspace
+    hyprspace.packages.${pkgs.system}.Hyprspace
   ];
 }
