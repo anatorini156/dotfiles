@@ -28,6 +28,7 @@
     kubectl
     kind
     act
+    dracula-theme
   ];
   wayland.windowManager.hyprland.plugins = [
     pkgs.hyprlandPlugins.hyprspace
