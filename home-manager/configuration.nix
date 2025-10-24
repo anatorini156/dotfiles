@@ -24,7 +24,7 @@ in
   home.stateVersion = "25.05";
 
   home.packages = [
-  claude.packages.x86_64-linux.default
+    claude.packages.x86_64-linux.default
   ]
   ++ common
   ++ languages;
