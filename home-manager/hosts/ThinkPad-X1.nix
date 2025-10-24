@@ -54,6 +54,7 @@
     act
     dracula-theme
     hyprlock
+    hypridle
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
