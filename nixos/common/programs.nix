@@ -8,6 +8,13 @@
       enable = true;
       enableSSHSupport = true;
     };
+    regreet = {
+      enable = true;
+      theme = {
+          package = pkgs.gnome-themes-extra;
+          name = "Adwaita-dark";
+          };
+    };
     sway = {
       enable = false;
     };
