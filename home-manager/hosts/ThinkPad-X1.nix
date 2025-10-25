@@ -89,6 +89,7 @@
     pavucontrol
     spotify
     swaynotificationcenter
+    swayosd
     wlogout
   ];
   wayland.windowManager.hyprland.plugins = [
