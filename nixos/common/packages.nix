@@ -27,6 +27,7 @@
     waybar
     hyprlandPlugins.hyprspace
     hypridle
+    swayosd
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
