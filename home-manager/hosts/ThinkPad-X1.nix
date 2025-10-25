@@ -37,6 +37,11 @@
     };
   };
 
+  systemd.user.services.swayosd-libinput-backend = {
+    enable = true;
+    wantedBy = [ "default.target" ];
+  };
+
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
