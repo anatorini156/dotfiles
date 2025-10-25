@@ -26,6 +26,7 @@
     rofi
     waybar
     hyprlandPlugins.hyprspace
+    hypridle
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
