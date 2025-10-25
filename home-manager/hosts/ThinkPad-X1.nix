@@ -80,6 +80,7 @@
     hyprlock
     hyprpaper
     pavucontrol
+    spotify
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
