@@ -29,12 +29,15 @@
   };
 
   programs.kitty.settings.background_opacity = 0.75;
+
   services.hypridle.settings = {
     general = {
       after_sleep_cmd = "hyprlock";
       lock_cmd = "hyprlock";
     };
   };
+
+  services.swayosd.enable = true;
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
