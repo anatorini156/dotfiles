@@ -2,9 +2,9 @@
 {
 
   services = {
-      hypridle = {
-          enable = true;
-      };
+    hypridle = {
+      enable = true;
+    };
     dbus.packages = [
       pkgs.gnome-keyring
       pkgs.gcr
