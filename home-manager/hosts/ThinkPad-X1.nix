@@ -8,6 +8,11 @@
 {
   xdg = {
     enable = true;
+    configFile = {
+      "hypr/plugins.conf".text = ''
+        exec-once = hyprctl plugin load ${pkgs.hyprlandPlugins.hyprspace}/lib/libhyprspace.so
+      '';
+    };
     mimeApps = {
       enable = true;
       defaultApplications = {
@@ -74,8 +79,10 @@
     dracula-theme
     hyprlock
     hyprpaper
+    pavucontrol
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
   ];
+
 }
