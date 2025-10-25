@@ -9,9 +9,14 @@
   xdg = {
     enable = true;
     configFile = {
-      "hypr/plugins.conf".text = ''
-        exec-once = hyprctl plugin load ${pkgs.hyprlandPlugins.hyprspace}/lib/libhyprspace.so
-      '';
+      "hypr/plugins.conf" = {
+        text = ''
+          exec-once = hyprctl plugin load ${pkgs.hyprlandPlugins.hyprspace}/lib/libhyprspace.so
+        '';
+      };
+      "zsh/scripts.sh" = {
+        source = ../external/scripts.sh;
+      };
     };
     mimeApps = {
       enable = true;
@@ -82,6 +87,7 @@
     pavucontrol
     spotify
     swaynotificationcenter
+    swayosd
     wlogout
   ];
   wayland.windowManager.hyprland.plugins = [

@@ -44,6 +44,7 @@
     };
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+      source $HOME/.config/zsh/scripts.sh
     '';
 
     initContent = ''
@@ -105,20 +106,6 @@
         git init
         git add .
         git commit -m "Init"
-      }
-
-      ce() {
-          DIRS=$(cat <<'EOF'
-              nixos
-              nvim
-              hypr
-              waybar
-              home-manager
-              dupa
-              EOF
-          )
-          DIR=$(echo $DIRS | fzf)
-          nvim $(echo "$HOME/.config/$DIR/")
       }
 
       export EDITOR="nvim"
