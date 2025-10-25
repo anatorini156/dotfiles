@@ -1,4 +1,4 @@
-{ pkgs,username, ... }:
+{ pkgs, username, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -42,73 +42,87 @@
 
       '';
     };
-      initExtra = ''
-        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-      '';
+    initExtra = ''
+      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+    '';
 
     initContent = ''
-            hms() {
-                pushd ~/.config/home-manager/
-                git add .
-                home-manager switch
-                popd
-            }
+      hms() {
+          pushd ~/.config/home-manager/
+          git add .
+          home-manager switch
+          popd
+      }
 
-            hmc() {
-                pushd ~/.config/home-manager/
-                git add .
-                git commit
-                git push
-                popd
-            }
+      hmc() {
+          pushd ~/.config/home-manager/
+          git add .
+          git commit
+          git push
+          popd
+      }
 
-            hme() {
-                pushd ~/.config/home-manager/
-                $EDITOR .
-                git add .
-                git commit -m "Home-manager $(LC_TIME=en_US.UTF-8 date)"
-                popd
-            }
+      hme() {
+          pushd ~/.config/home-manager/
+          $EDITOR .
+          git add .
+          git commit -m "Home-manager $(LC_TIME=en_US.UTF-8 date)"
+          popd
+      }
 
-            ose() {
-                pushd ~/.config/nixos/
-                $EDITOR .
-                git add .
-                git commit -m "NixOS $(LC_TIME=en_US.UTF-8 date)"
-                popd
-            }
+      ose() {
+          pushd ~/.config/nixos/
+          $EDITOR .
+          git add .
+          git commit -m "NixOS $(LC_TIME=en_US.UTF-8 date)"
+          popd
+      }
 
-            oss() {
-                sudo nixos-rebuild switch
-            }
+      oss() {
+          sudo nixos-rebuild switch
+      }
 
-            osc() {
-                pushd ~/.config/nixos/
-                git add -f .
-                git commit
-                git push
-                popd
-            }
+      osc() {
+          pushd ~/.config/nixos/
+          git add -f .
+          git commit
+          git push
+          popd
+      }
 
-            port() {
-                sudo lsof -i :$1
-            }
+      port() {
+          sudo lsof -i :$1
+      }
 
-            nve() {
-              $EDITOR ~/.config/nvim/
-            }
+      nve() {
+        $EDITOR ~/.config/nvim/
+      }
 
-            setup() {
-              template=$(ls ~/.config/templates | fzf)
-              cp -i -r $HOME/.config/templates/$template/.* .
-              cp -i -r $HOME/.config/templates/$template/* .
-              git init
-              git add .
-              git commit -m "Init"
-            }
+      setup() {
+        template=$(ls ~/.config/templates | fzf)
+        cp -i -r $HOME/.config/templates/$template/.* .
+        cp -i -r $HOME/.config/templates/$template/* .
+        git init
+        git add .
+        git commit -m "Init"
+      }
 
-            export EDITOR="nvim"
-            # eval "$(/opt/homebrew/bin/brew shellenv)"
+      ce() {
+          DIRS=$(cat <<'EOF'
+              nixos
+              nvim
+              hypr
+              waybar
+              home-manager
+              dupa
+              EOF
+          )
+          DIR=$(echo $DIRS | fzf)
+          nvim $(echo "$HOME/.config/$DIR/")
+      }
+
+      export EDITOR="nvim"
+      # eval "$(/opt/homebrew/bin/brew shellenv)"
 
     '';
 
