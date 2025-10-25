@@ -6,6 +6,18 @@
   ...
 }:
 {
+  xdg = {
+    enable = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "text/html" = [ "zen-beta.desktop" ];
+        "x-scheme-handler/http" = [ "zen-beta.desktop" ];
+        "x-scheme-handler/https" = [ "zen-beta.desktop" ];
+      };
+    };
+  };
+
   programs.kitty.settings.background_opacity = 0.75;
   services.hypridle.settings = {
     general = {
