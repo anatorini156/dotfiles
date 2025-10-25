@@ -23,6 +23,11 @@ in
   fonts.fontconfig.enable = true;
   home.stateVersion = "25.05";
 
+  services.dbus.enable = true;
+  services.swayosd = {
+    enable = true;
+  };
+
   home.packages = [
     claude.packages.x86_64-linux.default
   ]
