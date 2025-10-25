@@ -10,7 +10,6 @@
       pkgs.gcr
     ];
     dbus.enable = true;
-    polkit.enable = true;
     greetd = {
       enable = true;
     };
