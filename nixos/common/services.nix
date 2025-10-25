@@ -12,6 +12,7 @@
     dbus.enable = true;
     greetd = {
       enable = true;
+      settings.session.command = "dbus-run-session Hyprland";
     };
     fprintd.enable = true;
     fprintd.tod.enable = true;
