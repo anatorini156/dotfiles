@@ -90,7 +90,6 @@
     hyprpaper
     blender
     pavucontrol
-    spotify
     swaynotificationcenter
     swayosd
     wlogout
