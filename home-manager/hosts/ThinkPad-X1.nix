@@ -96,6 +96,7 @@
     nwg-clipman
     nwg-look
     nwg-displays
+    hyprshot
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
