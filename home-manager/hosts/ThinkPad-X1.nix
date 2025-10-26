@@ -99,6 +99,7 @@
     nwg-displays
     hyprshot
     zathura
+    playerctl
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
