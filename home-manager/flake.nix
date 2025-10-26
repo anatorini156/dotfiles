@@ -39,7 +39,7 @@
       url = "github:nixos/nixpkgs?rev=07518c851b0f12351d7709274bbbd4ecc1f089c7";
     };
     spotify-pkgs = {
-      url = "github:nixos/nixpkgs?rev=9957cd48326fe8dbd52fdc50dd2502307f188b0d";
+      url = "github:nixos/nixpkgs?rev=05bbf675397d5366259409139039af8077d695ce";
     };
   };
 
