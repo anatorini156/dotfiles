@@ -72,7 +72,10 @@
               ];
             };
             blender = import blender-pkgs { inherit system; };
-            spotify = import spotify-pkgs { inherit system; };
+            spotify = import spotify-pkgs {
+              inherit system;
+              config.allowUnfree = true;
+            };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
