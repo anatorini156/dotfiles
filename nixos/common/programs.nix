@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
   programs = {
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
     zsh = {
       enable = true;
     };
@@ -11,9 +15,9 @@
     regreet = {
       enable = true;
       theme = {
-          package = pkgs.gnome-themes-extra;
-          name = "Adwaita-dark";
-          };
+        package = pkgs.gnome-themes-extra;
+        name = "Dracula";
+      };
     };
     sway = {
       enable = false;
