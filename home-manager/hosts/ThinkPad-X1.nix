@@ -94,6 +94,7 @@
     nautilus
     nwg-clipman
     nwg-look
+    nwg-displays
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
