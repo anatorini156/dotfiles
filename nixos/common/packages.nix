@@ -29,6 +29,7 @@
     hypridle
     hyprpolkitagent
     cliphist
+    wl-clipboard
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
