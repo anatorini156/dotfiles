@@ -3,6 +3,7 @@
   pkgs,
   zen,
   hyprspace,
+  blender,
   ...
 }:
 {
@@ -79,13 +80,13 @@
     libreoffice-still
     postman
     godot
-    blender
     kubectl
     kind
     act
     dracula-theme
     hyprlock
     hyprpaper
+    blender.blender
     pavucontrol
     spotify
     swaynotificationcenter

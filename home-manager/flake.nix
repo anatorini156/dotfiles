@@ -35,6 +35,9 @@
       # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
       inputs.hyprland.follows = "hyprland";
     };
+    blender = {
+      url = "github:nixos/nixpkgs/nixos-25.05/459104f841356362bfb9ce1c788c1d42846b2454";
+    };
   };
 
   outputs =
@@ -46,6 +49,7 @@
       zen-browser,
       claude-desktop,
       Hyprspace,
+      blender,
       ...
     }:
     {
@@ -63,6 +67,7 @@
                 })
               ];
             };
+            blender = import blender { inherit system; };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
@@ -73,6 +78,7 @@
               ./hosts/${host}.nix
             ];
             extraSpecialArgs = {
+              blender = blender;
               python_pkgs = nixpkgs-python;
               claude = claude-desktop;
               zen = zen-browser;
