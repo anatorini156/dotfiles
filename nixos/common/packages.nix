@@ -28,6 +28,7 @@
     hyprlandPlugins.hyprspace
     hypridle
     hyprpolkitagent
+    cliphist
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany
