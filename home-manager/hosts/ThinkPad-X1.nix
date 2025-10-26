@@ -93,6 +93,7 @@
     wlogout
     nautilus
     nwg-clipman
+    nwg-look
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
