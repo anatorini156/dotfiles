@@ -54,6 +54,22 @@
         "type": "github"
       }
     },
+    "blender-pkgs": {
+      "locked": {
+        "lastModified": 1711404521,
+        "narHash": "sha256-cYhDZ3RYLiXAi4LQDGuQjjDDbtP00Wd/Vjal/jWyTuA=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "07518c851b0f12351d7709274bbbd4ecc1f089c7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "07518c851b0f12351d7709274bbbd4ecc1f089c7",
+        "type": "github"
+      }
+    },
     "claude-desktop": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -559,6 +575,7 @@
     "root": {
       "inputs": {
         "Hyprspace": "Hyprspace",
+        "blender-pkgs": "blender-pkgs",
         "claude-desktop": "claude-desktop",
         "home-manager": "home-manager",
         "hyprland": "hyprland",

@@ -3,7 +3,7 @@
   pkgs,
   zen,
   hyprspace,
-  blender,
+  blender-pkgs,
   ...
 }:
 {
@@ -86,7 +86,7 @@
     dracula-theme
     hyprlock
     hyprpaper
-    blender.blender
+    blender
     pavucontrol
     spotify
     swaynotificationcenter
