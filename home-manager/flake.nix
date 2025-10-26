@@ -38,6 +38,9 @@
     blender-pkgs = {
       url = "github:nixos/nixpkgs?rev=07518c851b0f12351d7709274bbbd4ecc1f089c7";
     };
+    spotify-pkgs = {
+      url = "github:nixos/nixpkgs?rev=9957cd48326fe8dbd52fdc50dd2502307f188b0d";
+    };
   };
 
   outputs =
@@ -50,6 +53,7 @@
       claude-desktop,
       Hyprspace,
       blender-pkgs,
+      spotify-pkgs,
       ...
     }:
     {
@@ -68,6 +72,7 @@
               ];
             };
             blender = import blender-pkgs { inherit system; };
+            spotify = import spotify-pkgs { inherit system; };
           in
           home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
@@ -79,6 +84,7 @@
             ];
             extraSpecialArgs = {
               blender-pkgs = blender;
+              spotify-pkgs = spotify;
               python_pkgs = nixpkgs-python;
               claude = claude-desktop;
               zen = zen-browser;

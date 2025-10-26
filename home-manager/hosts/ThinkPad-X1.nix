@@ -4,6 +4,7 @@
   zen,
   hyprspace,
   blender-pkgs,
+  spotify-pkgs,
   ...
 }:
 {
@@ -73,6 +74,7 @@
     chafa
     alsa-utils
     xclip
+    spotify-pkgs.spotify
     zen.packages.${pkgs.system}.default
     reaper
     coolercontrol.coolercontrold
