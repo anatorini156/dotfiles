@@ -30,7 +30,7 @@
     };
   };
 
-  programs.kitty.settings.background_opacity = 0.75;
+  programs.kitty.settings.background_opacity = 0.85;
 
   services.hypridle.settings = {
     general = {
