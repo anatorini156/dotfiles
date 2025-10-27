@@ -101,6 +101,7 @@
     zathura
     playerctl
     vscode
+    cheese
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
