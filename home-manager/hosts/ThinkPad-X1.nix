@@ -100,6 +100,7 @@
     hyprshot
     zathura
     playerctl
+    vscode
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
