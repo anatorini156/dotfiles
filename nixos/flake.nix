@@ -7,7 +7,9 @@
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
       submodules = true;
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
     Hyprspace = {
       url = "github:KZDKM/Hyprspace";
