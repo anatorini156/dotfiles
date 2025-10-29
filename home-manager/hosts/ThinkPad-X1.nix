@@ -102,6 +102,7 @@
     playerctl
     vscode
     cheese
+    android-studio
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
