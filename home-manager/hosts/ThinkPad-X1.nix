@@ -104,6 +104,7 @@
     vscode
     cheese
     unstable.androidStudioPackages.dev
+    wayvnc
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
