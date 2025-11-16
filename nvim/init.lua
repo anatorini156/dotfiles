@@ -16,7 +16,7 @@ vim.opt.clipboard:append("unnamedplus")
 vim.opt.wrap = false
 vim.opt.scrolloff = 15
 vim.opt.undofile = true
-vim.g.disable_autoformat = true
+vim.g.disable_autoformat = false
 vim.wo.cursorline = true
 
 require("config.lazy")
@@ -25,7 +25,9 @@ require("config.lsp")
 require("config.format")
 require("config.commands")
 
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+	view = {
+		side = "right",
+	},
+})
 require("telescope")
-
-
