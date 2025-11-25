@@ -105,6 +105,7 @@
     cheese
     unstable.androidStudioPackages.dev
     wayvnc
+    arduino-ide
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
