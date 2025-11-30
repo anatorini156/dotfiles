@@ -106,7 +106,7 @@
     unstable.androidStudioPackages.dev
     wayvnc
     arduino-ide
-    unstable.godot
+    godot
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
