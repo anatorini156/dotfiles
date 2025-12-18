@@ -107,6 +107,7 @@
     wayvnc
     arduino-ide
     godot
+    raylib-games
   ];
   wayland.windowManager.hyprland.plugins = [
     hyprspace.packages.${pkgs.system}.Hyprspace
