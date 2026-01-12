@@ -12,6 +12,7 @@ local servers = {
 	"kotlin_language_server",
 	"bashls",
 	"cmake",
+	"rust_analyzer",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({})
@@ -56,4 +57,3 @@ lspconfig.nil_ls.setup({
 })
 
 vim.lsp.enable("docker_language_server")
-

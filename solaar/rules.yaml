@@ -1,22 +1,22 @@
 %YAML 1.3
 ---
 - Test: thumb_wheel_up
-- Execute: [/home/anatorini/.nix-profile/bin/amixer, set, Master, 1%+]
+- Execute: [wpctl, set-volume, -l, '1', '@DEFAULT_AUDIO_SINK@', 3%+]
 ...
 ---
 - Test: thumb_wheel_down
-- Execute: [/home/anatorini/.nix-profile/bin/amixer, set, Master, 1%-]
+- Execute: [wpctl, set-volume, -l, '1', '@DEFAULT_AUDIO_SINK@', 3%-]
 ...
 ---
 - MouseGesture: Mouse Down
 - KeyPress:
-  - Escape
+  - [Super_L, Down]
   - click
 ...
 ---
 - MouseGesture: Mouse Up
 - KeyPress:
-  - Super_L
+  - [Super_L, Up]
   - click
 ...
 ---

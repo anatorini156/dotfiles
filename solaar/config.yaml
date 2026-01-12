@@ -1,5 +1,5 @@
 - 1.1.14
-- _NAME: MX Master 3S For Business
+- _NAME: 'MX Master 3S '
   _absent: [hi-res-scroll, lowres-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi_extended, speed-change, backlight,
     backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control,
     rgb_zone_, brightness_control, per-key-lighting, fn-swap, persistent-remappable-keys, disable-keyboard-keys, crown-smooth, divert-crown, divert-gkeys,
@@ -8,7 +8,9 @@
   _modelId: B03500000000
   _sensitive: {change-host: true, divert-keys: true, hires-scroll-mode: false, reprogrammable-keys: true, scroll-ratchet: false, smart-shift: false, thumb-scroll-invert: false,
     thumb-scroll-mode: true}
+  _serial: D9582074
   _unitId: D9582074
+  _wpid: B035
   change-host: null
   divert-keys: {82: 0, 83: 0, 86: 0, 195: 2, 196: 0}
   dpi: 1000
@@ -20,9 +22,15 @@
   smart-shift: 13
   thumb-scroll-invert: false
   thumb-scroll-mode: true
-- _NAME: G502 X LIGHTSPEED
+- _NAME: G502 X LS
+  _absent: [hi-res-scroll, lowres-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert, thumb-scroll-mode, report_rate_extended, pointer_speed,
+    dpi_extended, speed-change, backlight, backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed,
+    led_control, led_zone_, rgb_control, rgb_zone_, brightness_control, per-key-lighting, fn-swap, reprogrammable-keys, persistent-remappable-keys, divert-keys,
+    disable-keyboard-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, change-host, gesture2-gestures, gesture2-divert,
+    gesture2-params, sidetone, equalizer, adc_power_management]
+  _battery: 4100
   _modelId: 409FC0980000
-  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
+  _sensitive: {dpi: false, hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
   _serial: '33221927'
   _unitId: '33221927'
   _wpid: 409F
@@ -41,7 +49,9 @@
   _battery: 4100
   _modelId: B36300000000
   _sensitive: {change-host: false}
+  _serial: 22A46B47
   _unitId: 22A46B47
+  _wpid: B363
   backlight: 0
   change-host: null
   disable-keyboard-keys: {1: false, 2: false, 4: false, 8: false, 16: false}
