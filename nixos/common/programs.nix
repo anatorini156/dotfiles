@@ -11,7 +11,6 @@
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
-      allowSSHKeyImport = true;
     };
     regreet = {
       enable = true;
