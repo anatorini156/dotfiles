@@ -27,7 +27,7 @@ require("config.commands")
 
 require("nvim-tree").setup({
 	view = {
-		side = "right",
+		side = "left",
 	},
 })
 require("telescope")
