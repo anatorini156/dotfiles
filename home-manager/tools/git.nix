@@ -51,6 +51,8 @@
       ".cache"
       ".settings/"
       "*.patch"
+      "*tmp*"
+      "*.ipynb"
     ];
 
   };

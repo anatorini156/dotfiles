@@ -1,17 +1,18 @@
-{ pkgs,python_pkgs, ... }:
+{ pkgs, python_pkgs, ... }:
 with pkgs;
 [
   lua
   lua-language-server
   stylua
 
-  nil 
+  nil
   nixfmt-rfc-style # Nix formatter
 
   nodejs_24
   typescript
   typescript-language-server
-  
+  eslint
+
   pyright
   black
 
@@ -30,7 +31,7 @@ with pkgs;
   gradle
   kotlin
   jdk
- 
+
   jdt-language-server
   maven
 
@@ -42,5 +43,6 @@ with pkgs;
   android-tools
 
   docker-language-server
+  graphql-language-service-cli
 
 ]

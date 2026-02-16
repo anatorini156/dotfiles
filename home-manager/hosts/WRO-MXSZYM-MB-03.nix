@@ -7,5 +7,10 @@
   home.packages = with pkgs; [
     spotify
     discord
+    vscode
+    blender
+    bun
+    pandoc
+    tree-sitter
   ];
 }

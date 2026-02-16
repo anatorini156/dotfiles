@@ -12,14 +12,15 @@ local servers = {
 	"kotlin_language_server",
 	"bashls",
 	"cmake",
-	"rust_analyzer",
+  "graphql",
+  "eslint",
 }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({})
 end
 
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "java" },
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "java","latex" },
 	sync_install = false,
 	modules = {},
 	auto_install = true,

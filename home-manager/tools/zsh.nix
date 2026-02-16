@@ -22,6 +22,7 @@
       fa = "fd -IH";
       rp = "rg --passthrough";
       gb = "git switch $(git branch | fzf)";
+      jqi = "jqp";
     };
     dirHashes = {
       dev = "$HOME/Dev/";
@@ -109,8 +110,8 @@
         git commit -m "Init"
       }
 
-      export EDITOR="nvim"
-      # eval "$(/opt/homebrew/bin/brew shellenv)"
+            export EDITOR="nvim"
+            # eval "$(/opt/homebrew/bin/brew shellenv)"
 
     '';
 

@@ -1,6 +1,7 @@
 {
   username,
   pkgs,
+  claude,
   zen,
   ...
 }:

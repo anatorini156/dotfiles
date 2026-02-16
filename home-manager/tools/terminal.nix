@@ -25,13 +25,14 @@
     themeFile = "rose-pine";
     settings = {
       tab_bar_style = "powerline";
+      background_opacity = 0.98;
       tab_powerline_style = "round";
       tab_title_template = "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{tab.last_focused_progress_percent}{tab.active_oldest_exe}";
       tab_bar_edge = "bottom";
       tab_bar_align = "left";
-      hide_window_decorations = "yes";
-      enabled_layouts = "tall:bias=50;full_size=1;mirrored=false";
-
+      hide_window_decorations = "titlebar-only";
+      enabled_layouts  = "tall:bias=50;full_size=1;mirrored=false";
+      window_padding_width = 4;
       # incative_tab_forground = "#222222";
       # foreground = "#e0def4";
       background = "#121212";

@@ -1,6 +1,5 @@
 {
   pkgs,
-  claude,
   python_pkgs,
   username,
   ...
@@ -28,7 +27,6 @@ in
   };
 
   home.packages = [
-    claude.packages.x86_64-linux.default
   ]
   ++ common
   ++ languages;

@@ -12,5 +12,6 @@
     ./zoxide.nix
     ./fd.nix
     ./terminal.nix
+    ./fzf.nix
   ];
 }
