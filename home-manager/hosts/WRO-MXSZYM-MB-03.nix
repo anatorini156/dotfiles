@@ -12,6 +12,6 @@
     bun
     pandoc
     tree-sitter
-    ghostty-bin
+    unstable.ghostty-bin
   ];
 }
