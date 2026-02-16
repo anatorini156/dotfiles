@@ -46,7 +46,7 @@
     };
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-      source $HOME/.config/zsh/scripts.sh
+      #source $HOME/.config/zsh/scripts.sh
     '';
 
     initContent = ''
