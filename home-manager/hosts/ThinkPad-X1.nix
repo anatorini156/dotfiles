@@ -8,6 +8,10 @@
   ...
 }:
 {
+
+  services.swayosd = {
+    enable = true;
+  };
   xdg = {
     enable = true;
     configFile = {

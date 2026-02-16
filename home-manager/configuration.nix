@@ -22,10 +22,6 @@ in
   fonts.fontconfig.enable = true;
   home.stateVersion = "25.05";
 
-  services.swayosd = {
-    enable = true;
-  };
-
   home.packages = [
   ]
   ++ common
